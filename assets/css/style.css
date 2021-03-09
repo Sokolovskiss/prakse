@@ -1,0 +1,699 @@
+div {
+    border: 0px solid red;
+}
+
+/*@font-face {
+    font-family: 'Mon';
+    src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+}*/
+
+.wrapper{
+    width:100%;
+    position:relative;
+    left:0;
+    top:0;
+}
+
+.wrapper2{
+    width:100%;
+    position:relative;
+    left:0;
+    bottom:0;
+}
+
+.wrapper3{
+    position:relative;
+    top:0;
+    left:0;
+    
+}
+
+nav {
+    display:block;
+    top:40px;
+    margin-left:61px;
+    border: 0px solid green;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+#logoImg{
+    display:block;
+    margin: 0 auto 0 auto;
+    float:right;
+}
+
+.navigacija {
+  float: left;
+  font-size:18px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px 17px;
+  font-weight:500;
+  border: 0px solid green;
+  font-weight:bold;
+}
+
+.navigacija a {
+  display: block;
+  color: white;
+  text-align: center;  
+  text-decoration: none;
+  color:black;
+}
+
+.navigacija a:hover {
+  color:gray;
+  font-weight:bold;
+}
+
+.button1{
+    width:233px;
+    height:50px;
+    background-color: orange;
+    border:none;
+    border-radius: 40px 40px 40px 40px;
+    color:white;
+    display:block;
+    position:absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size:18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title1{
+    text-align:center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    padding-bottom:50px;
+    padding-top:22%;
+    color:#2F4858;
+    font-weight:bold;
+}
+
+.title2{
+    text-align:center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    color:#2F4858;
+    font-weight:bold;
+    padding-top:150px;
+    padding-bottom:50px;
+}
+
+#atbalstitaji{
+    background-color:#FFCB66;
+}
+
+#logo{
+    background-color:#365461;
+    color:white;
+    
+}
+
+#logo span{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ulLogo{
+    background-color:#365461;
+    font-size:18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#ulLogo4{
+    text-align:right;
+    margin-right:10%;
+}
+#teksts{
+    text-align:center;
+    font-size:18px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right:26.5%;
+    margin-left:26.5%;
+    margin-top:10.5%;
+    margin-bottom:10%;
+    color: #2f4858;
+    line-height:21.94px;
+}
+
+#teksts2{
+    padding-left:1px;
+}
+#inputLauki{
+    width:50%;
+    position:relative;
+    left:25%;
+}
+input{
+    background-color:#C4C4C4;
+    border:none;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom:1%;
+    margin-bottom:15px;
+    color:#2F4858;
+}
+
+.inputLauks1{
+   position:relative;
+   width:48.4%;
+   height:43px;
+}
+
+#inputLauks2{
+    height:43px;
+}
+
+#inputLauks2, #inputLauks3{
+    width:100%;
+}
+
+#inputLauks3{
+    background-color:#C4C4C4;
+    border:none;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom:1%;
+    height:300px;
+    color:#2F4858;
+}
+
+.underInputText{
+    color:#2F4858;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    font-size:14px;
+    line-height:17px;
+    color:#2F4858;
+
+}
+
+input[type="text"]{
+    font-size:18px;
+    font-family: 'Montserrat', sans-serif;
+    color:#2F4858;
+    padding-left:2%;
+}
+
+textarea{
+    font-size:18px;
+    font-family: 'Montserrat', sans-serif;
+    color:#2F4858;
+    padding-left:2%;
+}
+
+
+
+
+
+#submitButton{
+    width:182px;
+    height:62px;
+    background-color: orange;
+    border:none;
+    border-radius: 40px 40px 40px 40px;
+    color:white;
+    display:block;
+    margin: 0 auto 0 auto;
+    margin-top:50px;
+    font-size:24px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom:150px;
+}
+
+#beigas{
+    background-color:#365461;
+    color:white;
+    font-size:14px;
+    line-height:1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#video{
+    position:relative;
+    width:100%;
+}
+
+.playButton{
+    position:absolute;
+    left:45%;
+    top:45%;
+    cursor:pointer;
+    width:40px;
+    height:40px;
+    
+}
+
+.playButton img{
+    position:absolute;
+}
+
+
+
+#buttonBackground{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:white;
+    top:60%;
+    left:60%;
+}
+
+#tear1{
+    z-index:2;
+    position:absolute;   
+}
+
+.ripped{
+    z-index:2;
+    position:absolute;
+    width:100%;
+    
+}
+#ripped3{
+  bottom:10%;
+}
+
+#ripped4{
+    z-index:2;
+    position:absolute;
+    width:100%;   
+    top:-40px;      
+}
+
+
+#anda{
+    height:100%;
+    }
+
+.bildes{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.row div{
+    padding:0;
+}
+
+#goldenImg{
+    display:block;
+    margin: 0 auto 0 auto;
+    transform:scale(0.85,0.85);
+}
+
+.liText{
+    font-size:24px;
+    padding-bottom:5px;
+    font-weight:500;
+}
+
+#ulLink{
+    line-height:2.1;
+}
+
+#ulLink li a{
+    text-decoration:none;
+    color:white;
+}
+
+#atbalstitaji img{
+    display:block;
+    margin:0 auto 0 auto;
+}
+
+#zanda{
+    height:auto;
+    width:100%;
+}
+
+/*#sibilla{
+    height:100%;
+    width:100%;
+}
+
+#bildesStacked1{
+    height:100%;
+    width:100%;
+}
+
+#bildesStacked2{
+    height:auto;
+    width:100%;
+}
+
+#anda{
+    height:100%;
+    width:100%;
+}*/
+
+#atbalstitajiTeksts{
+    background-color:#FFCB66;
+    
+}
+#atbalstitajiTeksts p{
+    text-align:center;
+    font-family: 'Oswald', sans-serif;
+    font-size:24px;
+    color:darkBlue;
+    font-weight:500;
+    padding-top:80px;
+    color: #2F4858;
+    font-weight:bold;
+}
+
+#vardsUzvardsInput{
+    margin-right:2.5%;
+}
+
+#wave1{
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#atbalstitaji div{
+    padding-top:75px;
+    padding-bottom:75px;
+}
+
+#vt{
+    margin-left:10%;
+}
+#pp{
+    text-align:right;
+    margin-right:10%;
+}
+
+#x{
+    display:none;
+    position: absolute;
+    top:-40;
+    right:0;
+    z-index:3;
+    cursor:pointer;
+}
+.checkboxText{  
+    margin-top:-30px;
+    width:100%;   
+}
+
+.checkboxText div{
+    float:left;
+}
+
+.checkboxDiv{
+    width:8%;
+}
+
+.checkboxTxt{
+    width:92%;
+    margin-bottom:20px;
+}
+
+.checkboxTxt p{
+    margin-right:5%;
+}
+
+.overlayMenu ul{
+    display:none;
+    background-color:black;
+    opacity:0.9;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+}
+
+#fixedAnchorLink{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:3;
+    border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-bottom: 25px solid Black;
+    cursor:pointer;
+    display:none;
+}
+
+
+.overlayMenu li{
+    
+    font-size:50px;
+    font-style:none;
+    color:white;
+    text-align:center;    
+}
+
+.overlayMenu li a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.overlayMenu li a:hover{
+    text-decoration: none;
+    color:gray;      
+}
+#rekviziti{
+    font-weight:bold;
+    cursor:pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size:14px;
+    display:none;
+}
+
+#fb, #ig{
+    position:relative;
+    float:right;
+    margin-right:10%;
+    margin-top:5%;
+    cursor:pointer;
+}
+
+
+
+@media all and (max-width:1420px){
+    .inputLauks1{
+        width:100%;
+    }
+    #vardsUzvardsInput{
+        margin-right:0;
+    }
+    
+    .navigacija{
+       padding:0 7px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .navbar{
+        display:none;
+    }
+        #x{
+        display:block;
+        top:40px;
+        right:50px;
+        width:25px;
+    }
+            
+    
+}
+
+
+@media only screen and (max-width: 900px){
+    .navigacija{
+        padding:0 3px;
+        
+        
+    }
+     #atbalstitaji img{
+        transform:scale(0.6, 0.6);
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .sparkleLogo .col-md-2{
+        width:30%;
+    }
+    .sparkleLogo .col-md-10{
+        width:70%;
+    }
+    
+    #atbalstitaji img{
+        transform:scale(0.75, 0.75);
+    }
+    
+
+}
+
+@media only screen and (max-width: 768px){
+    #ulLogo4{
+        text-align:left;
+        margin-left:5%;
+        line-height:2.1;
+    }
+    
+    
+    
+    .ulLogo{
+    font-size:12px;
+    }
+    
+    #vt{
+        text-align:left;
+        margin-left:5%;
+    }
+    #pp{
+        text-align:left;
+        margin-left:5%;
+    }
+    
+    .navigacija{
+        display:none;
+    }
+    
+
+    #goldenImg{
+        position:relative;
+        float:left;       
+        transform:scale(0.8,0.8);
+    }
+    
+    .inputLauks1{
+        width:90%;
+        display:block;   
+        height:35px;
+    }
+    
+    #vardsUzvardsInput{
+        margin: 0 auto 5% auto;
+    }
+    
+    #epastsInput{
+        margin: 0 auto 0 auto;
+    }
+    
+    #inputLauks2{
+        height:35px;
+    }
+    
+    #inputLauks2, #inputLauks3{
+        width:90%;
+        display:block;
+        margin: 0 auto 0 auto;
+    }
+    
+    #inputLauks3{
+        height:150px;
+    }
+    
+    #teksts{
+        margin-left:30%;
+        margin-right:30%;
+        
+    }
+    
+    .button1{
+        width:183px;
+        height:50px;
+        font-size:18px;
+    }
+    
+    #atbalstitaji .col-md-3{
+        width:50%;
+    }
+    
+    #bildesStacked1{
+
+    }
+       
+    .sparkleLogo .col-md-2{
+        width:30%;
+    }
+    .sparkleLogo .col-md-10{
+        width:70%;
+    }
+    
+    #ulLink{
+        display:none;
+    }
+    #ulBiedriba{
+        display:none;
+    }
+   .liText{
+       padding-bottom:25px;
+   }
+   #fb, #ig{
+       float:left;
+       margin-left:5%;
+       margin-bottom:2%;
+   }
+   
+   #pp,#vt{
+       font-size:11px;
+   }
+   
+   .underInputText{
+       margin-left:5%;
+       font-size:12px;
+   }
+   
+   #checkBox{
+       float:right;
+   }
+   
+   #rekviziti{
+       display:block;
+   }
+   
+   .title1{
+       font-size:18px
+       font-weight:bold;
+   }
+   
+   .title2{
+       font-size:24px;
+       font-weight:bold;
+   }
+   
+   input[type="text"]{
+       font-size:14px;
+   }
+   
+   textarea{
+       font-size:14px;
+   }
+   #submitButton{
+       margin-bottom:170px;
+   }
+   
+   #atbalstitajiTeksts p{
+       font-size:24px;
+   }
+   
+   #teksts{
+       font-size:12px;
+       margin-left:5%;
+       margin-right:5%;
+   }
+   
+   #beigas br{
+       display:none;
+   }
+
+}
+
+
+
