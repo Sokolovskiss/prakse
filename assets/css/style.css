@@ -2,6 +2,8 @@ div {
     border: 0px solid red;
 }
 
+
+
 /*@font-face {
     font-family: 'Mon';
     src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
@@ -31,7 +33,7 @@ div {
 nav {
     display:block;
     top:40px;
-    margin-left:61px;
+    margin-left:5%;
     border: 0px solid green;
 }
 
@@ -201,13 +203,21 @@ input[type="text"]{
     padding-left:2%;
 }
 
+input::placeholder{
+    color:#2F4858;
+}
+
+
+
 textarea{
     font-size:18px;
     font-family: 'Montserrat', sans-serif;
     color:#2F4858;
     padding-left:2%;
 }
-
+textarea::placeholder{
+    color:#2F4858;
+}
 
 
 
@@ -225,7 +235,10 @@ textarea{
     font-size:24px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom:150px;
+    outline:none;
 }
+
+
 
 #beigas{
     background-color:#365461;
@@ -241,17 +254,20 @@ textarea{
     width:100%;
 }
 
-.playButton{
+.vid{}
+
+#playButton{
     position:absolute;
-    left:45%;
-    top:45%;
     cursor:pointer;
     width:40px;
     height:40px;
+    top:47%;
+    left:47%;
+    transform: translate(-47%, -47%)
     
 }
 
-.playButton img{
+#playButton img{
     position:absolute;
 }
 
@@ -263,7 +279,7 @@ textarea{
     height:100%;
     background-color:white;
     top:60%;
-    left:60%;
+    left:65%;
 }
 
 #tear1{
@@ -395,11 +411,16 @@ textarea{
 #x{
     display:none;
     position: absolute;
-    top:-40;
     right:0;
     z-index:3;
     cursor:pointer;
+    font-size:55px;
+    color:black;
+    font-weight:bold;
+    
 }
+
+
 .checkboxText{  
     margin-top:-30px;
     width:100%;   
@@ -445,6 +466,7 @@ textarea{
     cursor:pointer;
     display:none;
 }
+
 
 
 .overlayMenu li{
@@ -501,13 +523,9 @@ textarea{
         display:none;
     }
         #x{
-        display:block;
-        top:40px;
-        right:50px;
-        width:25px;
-    }
-            
-    
+        display:block;        
+        right:10%;                
+    }                
 }
 
 
@@ -519,6 +537,7 @@ textarea{
     }
      #atbalstitaji img{
         transform:scale(0.6, 0.6);
+        
     }
 
 }
@@ -533,6 +552,7 @@ textarea{
     
     #atbalstitaji img{
         transform:scale(0.75, 0.75);
+        object-fit:fill;
     }
     
 
@@ -545,6 +565,9 @@ textarea{
         line-height:2.1;
     }
     
+    #logoImg{
+        transform:scale(0.9,0.9);
+    }
     
     
     .ulLogo{

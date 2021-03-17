@@ -14,3 +14,15 @@ function scrollUp() {
     document.getElementById("fixedAnchorLink").style.display = 'none';
   }
 }
+
+
+var playButton = document.getElementById("playButton");
+playButton.addEventListener("click", function() {
+  if (video.paused == true) {
+    video.play();
+    playButton.style.display = 'none';
+    video.controls = true;
+  } else {
+    video.pause();
+  }
+});
