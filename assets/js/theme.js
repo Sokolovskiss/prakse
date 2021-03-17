@@ -17,10 +17,12 @@ function scrollUp() {
 
 
 var playButton = document.getElementById("playButton");
+var playButtonBg = document.getElementById("buttonBackground");
 playButton.addEventListener("click", function() {
   if (video.paused == true) {
     video.play();
     playButton.style.display = 'none';
+    playButtonBg.style.display = 'none';
     video.controls = true;
   } else {
     video.pause();

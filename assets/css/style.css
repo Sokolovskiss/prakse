@@ -49,14 +49,16 @@ ul {
     display:block;
     margin: 0 auto 0 auto;
     float:right;
+    max-width:160px;
+    width:100%;
+    height:auto;
 }
 
 .navigacija {
   float: left;
   font-size:18px;
   font-family: 'Montserrat', sans-serif;
-  padding: 0px 17px;
-  font-weight:500;
+  padding: 0px 30px;
   border: 0px solid green;
   font-weight:bold;
 }
@@ -163,6 +165,9 @@ input{
     color:#2F4858;
 }
 
+
+
+
 .inputLauks1{
    position:relative;
    width:48.4%;
@@ -252,6 +257,7 @@ textarea::placeholder{
 #video{
     position:relative;
     width:100%;
+    
 }
 
 .vid{}
@@ -259,27 +265,20 @@ textarea::placeholder{
 #playButton{
     position:absolute;
     cursor:pointer;
-    width:40px;
-    height:40px;
-    top:47%;
-    left:47%;
-    transform: translate(-47%, -47%)
-    
+    width:6%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);           
 }
-
-#playButton img{
-    position:absolute;
-}
-
 
 
 #buttonBackground{
     position:absolute;
-    width:100%;
-    height:100%;
-    background-color:white;
-    top:60%;
-    left:65%;
+    cursor:pointer;
+    width:5.7%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%); 
 }
 
 #tear1{
@@ -323,6 +322,9 @@ textarea::placeholder{
     display:block;
     margin: 0 auto 0 auto;
     transform:scale(0.85,0.85);
+    height:auto;
+    max-width:250px;
+    width:100%;
 }
 
 .liText{
@@ -340,35 +342,19 @@ textarea::placeholder{
     color:white;
 }
 
+
 #atbalstitaji img{
     display:block;
     margin:0 auto 0 auto;
-}
-
-#zanda{
+    max-width:200px;
     height:auto;
-    width:100%;
+    width:80%;
 }
 
-/*#sibilla{
-    height:100%;
-    width:100%;
+#lin img{
+    max-width:80px;
 }
 
-#bildesStacked1{
-    height:100%;
-    width:100%;
-}
-
-#bildesStacked2{
-    height:auto;
-    width:100%;
-}
-
-#anda{
-    height:100%;
-    width:100%;
-}*/
 
 #atbalstitajiTeksts{
     background-color:#FFCB66;
@@ -536,7 +522,7 @@ textarea::placeholder{
         
     }
      #atbalstitaji img{
-        transform:scale(0.6, 0.6);
+        /*transform:scale(0.6, 0.6);*/
         
     }
 
@@ -551,8 +537,8 @@ textarea::placeholder{
     }
     
     #atbalstitaji img{
-        transform:scale(0.75, 0.75);
-        object-fit:fill;
+        /*transform:scale(0.75, 0.75);*/
+
     }
     
 
@@ -636,11 +622,7 @@ textarea::placeholder{
     
     #atbalstitaji .col-md-3{
         width:50%;
-    }
-    
-    #bildesStacked1{
-
-    }
+    }   
        
     .sparkleLogo .col-md-2{
         width:30%;
