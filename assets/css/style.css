@@ -165,17 +165,16 @@ input{
     color:#2F4858;
 }
 
-
-
-
 .inputLauks1{
    position:relative;
-   width:48.4%;
+   width:48.43%;
    height:43px;
+   background: rgba(196, 196, 196, 0.4);
 }
 
 #inputLauks2{
     height:43px;
+    background: rgba(196, 196, 196, 0.4);
 }
 
 #inputLauks2, #inputLauks3{
@@ -183,7 +182,7 @@ input{
 }
 
 #inputLauks3{
-    background-color:#C4C4C4;
+    background: rgba(196, 196, 196, 0.4);
     border:none;
     border-radius: 5px 5px 5px 5px;
     margin-bottom:1%;
@@ -417,11 +416,11 @@ textarea::placeholder{
 }
 
 .checkboxDiv{
-    width:8%;
+    width:5%;
 }
 
 .checkboxTxt{
-    width:92%;
+    width:95%;
     margin-bottom:20px;
 }
 
@@ -440,6 +439,64 @@ textarea::placeholder{
     height:100%;
     z-index:2;
 }
+
+.customCheckbox{
+  display: block;
+  position: relative;  
+  margin-top:2px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.customCheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #E7E7E7;
+  border-radius: 3px;
+}
+
+.customCheckbox:hover input ~ .checkmark {
+  background-color: gray;
+}
+
+.customCheckbox input:checked ~ .checkmark {
+  background-color: orange;
+}
+
+.checkmark:after {
+  content: "";
+  top: 0;
+  left: 20px;
+  position: absolute;
+  display: none;
+}
+
+.customCheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.customCheckbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
 
 #fixedAnchorLink{
     position:fixed;
@@ -655,9 +712,10 @@ textarea::placeholder{
        font-size:12px;
    }
    
-   #checkBox{
+   .customCheckbox{
        float:right;
-   }
+       
+   }    
    
    #rekviziti{
        display:block;
