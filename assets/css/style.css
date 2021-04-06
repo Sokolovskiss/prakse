@@ -1,5 +1,5 @@
 div {
-    border: 0px solid red;
+    border: 1px solid red;
 }
 
 
@@ -52,15 +52,16 @@ ul {
     max-width:160px;
     width:100%;
     height:auto;
+    cursor:pointer;
 }
 
 .navigacija {
   float: left;
   font-size:18px;
   font-family: 'Montserrat', sans-serif;
-  padding: 0px 29px;
   border: 0px solid green;
   font-weight:bold;
+  margin-right:50px;
 }
 
 .navigacija a {
@@ -119,6 +120,7 @@ ul {
 #logo{
     background-color:#365461;
     color:white;
+    padding-top:70px;
     
 }
 
@@ -136,7 +138,7 @@ ul {
     text-align:right;
     margin-right:10%;
 }
-#teksts{
+.text{
     text-align:center;
     font-size:18px;
     font-family: 'Montserrat', sans-serif;
@@ -546,6 +548,376 @@ textarea::placeholder{
     cursor:pointer;
 }
 
+#titlePage{
+    text-align:center;
+    font-weight:bold;
+    font-size:48px;
+    font-family: 'Oswald', sans-serif;
+    color:#2F4858;
+    margin-top:115px;    
+}
+
+#titleSapnuBanka{
+    text-align:center;
+    font-weight:bold;
+    font-size:48px;
+    font-family: 'Oswald', sans-serif;
+    color:#2F4858;
+    margin-top:115px; 
+    margin-bottom:40px;
+}
+
+
+#textIdeja{
+    margin-top:70px;
+    margin-left:30%;
+    margin-right:30%;
+    margin-bottom:145px;
+}
+
+#pictureJuris{
+    width:100%;
+}
+
+#pictureJurisText{
+    bottom:30px;
+    position:absolute;
+    color:white;
+    z-index:1;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size:24px;
+    margin-left:25%;
+    margin-right:25%;
+    margin-bottom:90px;
+    text-align:center;
+    line-height:36px;    
+}
+
+#titleKenLudden{
+    font-family: 'Oswald', sans-serif;
+    font-size:24px;
+    color:#2F4858;
+}
+
+#descKenLudden{
+    font-family: 'Montserrat', sans-serif;
+    font-size:18px;
+    color:#2F4858;
+    margin-bottom:40px;
+}
+
+#textKenLudden{
+    font-family: 'Montserrat', sans-serif;
+    font-size:24px;
+    color:#2F4858;
+    font-style:italic;
+}
+
+
+
+#arrow1, #arrow2{
+    cursor:pointer;
+}
+
+#arrow2{
+    margin-left:40px;
+}
+
+#arrow2:hover{
+    opacity:0.5;
+}
+
+.KenLuddenRow{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+#activePage{
+    border-bottom: 3px solid orange;
+    border-width:50%;
+}
+
+#textSapnis{
+    margin-top:70px;
+    margin-left:30%;
+    margin-right:30%;
+    margin-bottom:145px;
+    font-size:24px;
+    color:#2F4858;
+}
+
+.textBalloon, .titleBalloon{
+    text-align:center;
+    color:#2F4858;
+    
+}
+
+.textBalloon{
+    font-size: 18px;
+    margin-left:30%;
+    margin-right:30%;
+    font-family: 'Montserrat', sans-serif;
+    line-height:22px;
+    margin-bottom:150px;
+}
+
+.titleBalloon{
+    font-size:30px;
+    font-weight:bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.pictureBalloon{
+    display:block;
+    margin:0 auto 0 auto;
+    max-width:200px;
+    
+}
+
+.buttonSapnis{
+    width:25%;
+    height:50px;
+    background-color: orange;
+    border:none;
+    border-radius: 40px 40px 40px 40px;
+    color:white;
+    display:block;
+    position:absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size:18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#textUznemejiem,#textSapnusAtbalsta, #text99Iedvesmas{
+    margin-top:70px;
+    margin-bottom:0px;
+    font-size:18px;
+    color:#2F4858;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#textSapnusAtbalsta{
+    margin-bottom:80px;
+}
+
+
+.textMerkis{
+    font-family: 'Montserrat', sans-serif;
+    color:#2F4858;
+    font-size:18px;
+    line-height:21.94px;
+    padding-top:30px;
+}
+
+#titleMerkis, #titleMisija{
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    color:#2f4858;
+    font-size:30px;
+    text-align:center;
+    margin-bottom:80px;
+    margin-top:120px;
+}
+
+#pictureSun, #pictureGlasses{
+    float:right;
+
+}
+
+#textCliff{
+    text-align:right;
+    margin-left:50%;
+    margin-right:5%;
+    margin-bottom:145px;
+}
+
+#textSun, #textGlasses{
+    margin-right:50%;
+    margin-left:5%;
+    margin-bottom:145px;
+}
+
+#titleMisija{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+#textMisija{
+    text-align:center;
+    font-size:24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    color:#2F4858;
+    margin-bottom:100px;
+}
+
+.row.sapnuBankaOrangeBackground{
+    background-color:#FFCB66;
+
+}
+
+#pictureTrees{
+    display:block;
+    margin: 0 auto 0 auto;
+    margin-top:150px;
+}
+
+#pictureRainbow{
+        display:block;
+    margin: 0 auto 0 auto;
+    margin-top:110px;
+}
+.textOrangeBackground{
+    color:white;
+    font-weight:bold;
+    font-size:24px;
+    line-height:29.26px;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+    margin-left:29%;
+    margin-right:29%;
+    margin-top:30px;
+    margin-bottom:100px;
+}
+
+
+#titleSapnusAtlasis{
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size:30px;
+    text-align:center;
+    color:#2F4858;
+    margin-bottom:60px;
+    margin-top:100px;
+}
+
+.textSapnusAtlasis{
+    font-family: 'Montserrat', sans-serif;
+    color:#2F4858;
+    font-weight:bold;
+    text-align:center;
+    font-size:24px;
+    margin-right:35%;
+    margin-left:35%;
+    margin-bottom:120px;
+}
+
+#picturePeople, #pictureMegaphone{
+    display:block;
+    margin: 0 auto 0 auto;
+}
+
+.freespace{
+    height:200px;
+}
+
+.title1SapnuBanka{
+    margin-top:-100px;
+}
+
+.dropdownBox{
+    background-color:#C4C4C4;
+    opacity:0.4;
+    width:300px;
+    border-radius:5px;
+}
+
+.dropdownBoxDesc{
+    color:#FFA800;
+    font-family: 'Montserrat', sans-serif;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#leftDropdownBox{
+    float:right;
+    position:relative;
+    right:2%;
+    margin-bottom:30px;
+}
+
+#rightDropdownBox{
+    margin-left:2%;
+    margin-bottom:30px;
+}
+.dropdownBox{
+    color:#2F4858;
+    font-size:18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height:21.94px;
+    border:none;
+}
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap:15px;
+}
+
+.grid-container img{
+    max-width:160px;
+    width:100%;
+
+}
+
+.grid-item{
+    background-color: rgba(255, 255, 255, 0.8); 
+    text-align: center;
+    cursor:pointer;
+    position:relative;
+}
+
+
+.gridNumber{
+    position:absolute;
+    bottom:0;
+    right:0;
+    color:red;
+    font-family: 'Oswald', sans-serif;
+    font-size:36px;
+    font-weight:900;
+    z-index:1;
+    
+}
+
+#titleSparkleHeart{
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size:30px;
+    text-align:center;
+    color:#2F4858;
+}
+
+#textSparkleHeart{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    font-size:18px;
+    text-align:center;
+    color:#2F4858;
+
+}
+
+.grid-container2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:15px;
+}
+
+.grid-item2{
+    background-color: rgba(255, 255, 255, 0.8); 
+    text-align: center;
+    cursor:pointer;
+}
+.grid-item2 img{
+    max-width:290px;
+    width:100%;
+}
 
 
 @media all and (max-width:1420px){
@@ -557,7 +929,8 @@ textarea::placeholder{
     }
     
     .navigacija{
-       padding:0 7px;
+       /*padding:0 7px;*/
+       margin-right:25px;
     }
 }
 
@@ -574,7 +947,8 @@ textarea::placeholder{
 
 @media only screen and (max-width: 900px){
     .navigacija{
-        padding:0 3px;
+        /*padding:0 3px;*/
+        /*margin-right:30px;*/
         
         
     }
@@ -665,7 +1039,7 @@ textarea::placeholder{
         height:150px;
     }
     
-    #teksts{
+    .text{
         margin-left:30%;
         margin-right:30%;
         
@@ -746,7 +1120,7 @@ textarea::placeholder{
        font-size:24px;
    }
    
-   #teksts{
+   .text{
        font-size:12px;
        margin-left:5%;
        margin-right:5%;

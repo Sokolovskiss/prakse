@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Uzdevums_1</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">    
+	<!-- Mobile Specifc Meta -->	
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<!-- Stylessheets -->
+	<link rel="stylesheet" media="all" href="assets/css/style.css" />
+	<!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+	<div class="container-fluid">   
+        <div class="row sparkleLogo">
+            <div class="col-md-2">
+            <a href="index.html">
+            <img src="assets/img/BlackLogo3.jpg" id="logoImg"></img>
+            </a>
+            </div>
+            <div class="col-md-10">
+                <nav class="navbar">
+                    <ul>
+                        <li class="navigacija"><a href="ideja.html">Ideja</a></li>    
+                        <li class="navigacija"><a href="sapnis.html">Piesaki sapni</a></li>
+                        <li class="navigacija" id="activePage"><a href="#">Uzņēmējiem</a></li>
+                        <li class="navigacija"><a href="sapnuBanka.html">Sapņu banka</a></li>
+                        <li class="navigacija"><a href="sapnusAtbalsta.html">Sapņu atbalsta</a></li>
+                        <li class="navigacija"><a href="99Iedvesmas.html">99 Iedvesmas stāsti</a></li>
+                        <li class="navigacija"><a href="#">LV</a></li>
+                    </ul>
+                </nav>
+                <div class="wrapper">
+                <div id="x" onclick="showMenu()">&#10005;</div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+            
+            <h1 id="titlePage">UZŅĒMĒJIEM</h1>                     
+                <p class="text" id="textUznemejiem">                                           
+                    Ja ticat lābākas pasaules attīstībai un vēlaties piedalīties starptautisku ideju realizēšanā, tad priecāsimies ar Jums iepazīties.
+                </p>
+            </div>
+        </div>
+
+        <!--sazinaties-->     
+        <div class="row">
+
+        <div class="col-md-3"></div>
+            <div class="col-md-6">
+            <p class="title2">PALĪDZI ĪSTENOT SAPNI!</p>
+            <form>           
+                <input type="text" placeholder="Vārds, Uzvārds*" class="inputLauks1" id="vardsUzvardsInput" maxlength="26""></input>                   
+                <input type="text" placeholder="E-pasts*" class="inputLauks1" maxlength="35" id="epastsInput"></input><br>                                    
+                <input type="text" placeholder="Telefons*" id="inputLauks2" maxlength="8"></input><br>
+               <textarea id="inputLauks3" maxlength="450" placeholder="Jautājums, vai komentārs*"></textarea>
+                <p class="underInputText">* obligāti aizpildāmie lauki<p><br>
+
+                
+                <div class="checkboxText">
+
+                    <div class="checkboxDiv">
+                    <!--<input type="checkbox" id="checkBox"/>-->
+                    <label class="customCheckbox">
+                    <input type="checkbox"/>
+                    <span class="checkmark"></span>
+                    </label>
+                    </div>                   
+                    <div class="checkboxTxt">
+                    <p class="underInputText">Piektrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz bīdim, 
+                kamēr tas būs nepieciešams.</p>
+                    </div>
+                </div>
+                
+                <input type="submit" value="Sūtīt" id="submitButton"></input>
+            </form>
+            </div>
+        <div class="col-md-3"></div>
+        </div>
+        <!-- logo-->
+         <div class="row">
+            <div class="wrapper">
+            <img src="assets/img/ripped67.png" class="ripped"></img>
+            </div>
+        </div>      
+        <div class="row" id="logo">
+            <div class="col-md-2">
+                <img src="assets/img/GoldenV2Logo3.png" id="goldenImg"></img>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <ul class="ulLogo" id="ulLink">
+                <li><a href="ideja.html">Ideja</a></li>
+                <li><a href="sapnis.html">Piesaki sapni</a></li>
+                <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
+                <li><a href="sapnuBanka.html">Sapņu banka</a></li>
+                <li><a href="sapnusAtbalsta.html">Sapņu atbalsta</a></li>
+                <li><a href="99Iedvesmas.html">99 Iedvesmas stāsti</a></li>       
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="ulLogo" id="ulBiedriba">
+                <li class="liText">Biedrība SparkleHeart</li>
+                <li>Reģistrācijas nr. 40008293119</li>
+                <li>Banka: SWEDBANK A/S</li>
+                <li>LV52HABA0551047652465</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul class="ulLogo" id="ulLogo4">
+                <li class="liText"><span>Juris Gogulis</span></li>
+                <li>juris.gogulis@sparkleheart.org</li>
+                <li>+37126890034</li>
+                <li>Biķernieku iela 24a - 5, LV-1006</li>
+                <li id="rekviziti">Skatīt rekvizītus</li>
+                </ul>
+                <img src="assets/img/ig.png" id="ig"/>
+                <img src="assets/img/facebook.png" id="fb"/>
+                
+            </div>
+        </div>
+        <div class="row"id="beigas">
+            <div class="col-md-3">
+            <p id="vt">&copy;SparkleHeart 2020.<br>
+            VisasTiesības aizsargātas
+            </p>
+            </div>
+            <div class="col-md-7"></div>   
+            <div class="col-md-2">
+            <p id="pp">Privātuma politika</p>
+            </div>
+       
+        </div>       
+    </div>
+       
+    <div class="overlayMenu"onclick="showMenu()">
+        <ul id="OM">
+            <li><a href="index.html">Ideja</a></li>
+            <li><a href="index.html">Piesaki sapni</a></li>
+            <li><a href="index.html">Uzņēmējiem</a></li>
+            <li><a href="index.html">Sapņu banka</a></li>
+            <li><a href="index.html">Sapņu atbalsta</a></li>
+            <li><a href="index.html">99 Iedvesmas stāsti</a></li>   
+            <li><a href="index.html">LV</a></li>             
+        </ul>
+    </div>
+    
+    <div id="fixedAnchorLink" onclick="window.scrollTo(0, 0);">
+    
+    </div>
+    
+    
+   <!-- JavaScript -->
+	<script type="text/javascript" src="assets/js/theme.js"></script>
+</body>
+</html>
