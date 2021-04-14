@@ -1,5 +1,5 @@
 div {
-    border: 1px solid red;
+    border: 0px solid red;
 }
 
 
@@ -48,14 +48,14 @@ ul {
 .logoImg{
     display:block;
     margin: 0 auto 0 auto;
-    float:right;
     max-width:160px;
     width:100%;
     height:auto;
     cursor:pointer;
+    text-align:center;
 }
 
-.navigacija {
+.navigacija{
   float: left;
   font-size:18px;
   font-family: 'Montserrat', sans-serif;
@@ -76,6 +76,36 @@ ul {
   color:gray;
   font-weight:bold;
 }
+
+.navGrid {
+  display:grid;
+  grid-template-columns: 17% 9% auto auto auto auto 15% auto;
+  font-size:18px;
+  font-family: 'Montserrat', sans-serif;
+  border: 0px solid green;
+  font-weight:bold;
+}
+
+.navGrid div{
+    position:relative;
+}
+
+.navGrid a {
+  display: block;
+  text-align: center;  
+  text-decoration: none;
+  color:black;
+  position:absolute;
+  bottom:9px;
+}
+
+.navGrid a:hover {
+  color:gray;
+  font-weight:bold;
+
+}
+
+
 
 .button1{
     width:233px;
@@ -255,15 +285,15 @@ textarea::placeholder{
 }
 
 
-.video{
+#video{
     position:relative;
-    width:100%;
-    
+    width:100%;   
 }
 
-.vid{}
 
-.playButton{
+
+
+#playButton{
     position:absolute;
     cursor:pointer;
     width:6%;
@@ -273,7 +303,7 @@ textarea::placeholder{
 }
 
 
-.buttonBackground{
+#buttonBackground{
     position:absolute;
     cursor:pointer;
     width:5.7%;
@@ -294,7 +324,7 @@ textarea::placeholder{
     
 }
 .ripped3{
-  bottom:10%;
+  bottom:0;
 }
 
 .ripped4{
@@ -400,10 +430,25 @@ textarea::placeholder{
     right:0;
     z-index:3;
     cursor:pointer;
-    font-size:55px;
+    font-size:35px;
     color:black;
-    font-weight:bold;
-    
+    font-weight:bold;    
+}
+
+.xButton img{
+    margin-top:30px;
+    max-width:100px;
+    width:100%;
+}
+
+#cm{
+    display:none;
+    position:absolute;
+    right:5%;
+    top:25%;
+    max-width:23px;
+    width:100%;
+    cursor:pointer;
 }
 
 
@@ -547,7 +592,7 @@ textarea::placeholder{
     position:relative;
     z-index:30;
     display: grid;
-    grid-template-columns: 20% auto auto auto 20%;
+    grid-template-columns: auto 30px 30px 30px auto;
     grid-gap:15px;
     margin-bottom:80px;
     width:100%;
@@ -555,12 +600,17 @@ textarea::placeholder{
     font-weight:600;
     text-align:center;
     font-family: 'Montserrat', sans-serif;
-    
 }
 
+#overlayGrid div{
+    position:relative;
+}
 
-#OM{
-    padding-top:150px;
+#overlayGrid p{
+    position:absolute;
+    top:0;
+    margin-bottom:0;
+    cursor:pointer;
 }
 
 .rekviziti{
@@ -625,6 +675,13 @@ textarea::placeholder{
     line-height:36px;    
 }
 
+.rectangleJuris{
+   position:absolute;
+   bottom:0;
+   max-height:60%;
+   min-width:100%;
+}
+
 .titleKenLudden{
     font-family: 'Oswald', sans-serif;
     font-size:24px;
@@ -668,7 +725,11 @@ textarea::placeholder{
     border-bottom: 3px solid orange;
 }
 
-.activePageOM{
+.activePageOM p{
+    border-bottom: 3px solid orange;
+}
+
+ul .activePageOM{
     border-bottom: 5px solid orange;
 }
 
@@ -874,7 +935,7 @@ textarea::placeholder{
 .dropdownBox{
     background-color:#C4C4C4;
     opacity:0.4;
-    width:300px;
+    width:100%;
     border-radius:5px;
 }
 
@@ -885,36 +946,89 @@ textarea::placeholder{
     font-weight:bold;
 }
 
-.leftDropdownBox{
-    float:right;
-    position:relative;
-    right:2%;
+.leftDropdownBox, .rightDropdownBox{   
     margin-bottom:30px;
 }
 
-.rightDropdownBox{
-    margin-left:2%;
-    margin-bottom:30px;
+.dropDownBoxGrid{
+    display:grid;
+    grid-template-columns: auto 15% 15% auto;
+    column-gap:0;
+    position:relative;
 }
+
 .dropdownBox{
     color:#2F4858;
     font-size:18px;
     font-family: 'Montserrat', sans-serif;
     line-height:21.94px;
     border:none;
+    padding-left:10px;
+    padding-right:10px;
+    height: 43px;
 }
+
+.selectedItemsGrid{
+    display:grid;
+    grid-template-columns: 20% 15% 30% 15% 20%;
+}
+
+
+.selectedItemsGrid div{
+    position:relative;
+}
+
+.selectedItemsGrid h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:24px;
+    color:#2F4858;
+    
+
+    
+}
+
+.selectedItemsGrid p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    font-size:18px;
+    color:#2F4858;
+    text-align:right;
+}
+
+.selectedItemsGrid img{
+    max-width:120px;
+    width:100%;
+}
+
+
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+
 
 .grid-container{
     display: grid;
     grid-template-columns: 14% auto auto auto auto auto auto 14%;
     grid-gap: 1%;
-    margin-bottom:150px;
+    margin-bottom:750px;
 }
 
 .grid-container img{
     max-width:205px;
-    width:100%;
-
+    width:100%;       
 }
 
 .grid-item{
@@ -922,37 +1036,57 @@ textarea::placeholder{
     text-align: center;
     cursor:pointer;
     position:relative;
-}
 
+}
 
 .gridNumber{
     position:absolute;
     color:white;
     font-family: 'Oswald', sans-serif;
     font-size:36px;
+    font-size:3vh;   
     font-weight:900;
     z-index:2;
     width:100%;
-    height:100%;
-    top:0;
+    bottom:0;
     left:0;    
-    
+    border: 0px solid green;
+    line-height:0;
 }
+
 
 .gridNumber p{
     position:absolute;
     bottom:0;
-    right:5%;
+    right:15%;
+    transform: translate(-15%, 0);
 }
+
+/*
+.gridNumber p{
+    width:100%;
+    position:absolute; 
+    bottom:0;
+    display:block;
+    margin: auto auto 0 auto;
+    transform:translateX(-5%);
+    border: 1px solid green;
+
+}*/
 
 .gridPictureTransparent{
     position:absolute;
     z-index:2;
-    left:0;
+    align-self: center;
     top:0;
     opacity:.4;
     height:100%;
+    left:50%;
+    transform:translateX(-50%);
 }
+
+
+
 
 .titleSparkleHeart{
     font-family: 'Oswald', sans-serif;
@@ -987,6 +1121,14 @@ textarea::placeholder{
     width:100%;
 }
 
+.rectangle{
+    position:absolute;
+    top:0;
+    z-index:40;
+    left:50%;
+    transform:translateX(-50%);
+}
+
 .grid-containerPictures1{
     display: grid;
     grid-template-columns: 25% 25% 23% 27%;
@@ -999,10 +1141,24 @@ textarea::placeholder{
     
 }
 
-.gridItemPictures1{
-  
-
+.gridNoPicture{
+    position:absolute;
+    border: 1px solid blue;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    height:60%;
+    text-align:center;
+    vertical-align:middle;
+    color:white;
+    font-family: 'Oswald', sans-serif;
+    font-weight:700;
+    font-size: 24px;
+    font-size: 1.4vw;
 }
+
+
 
 #submitMessage1{
     text-align:center;
@@ -1030,10 +1186,13 @@ textarea::placeholder{
 }
 
 .pictureJurisRow{
-    
-    height:800px;
-    background-image: url(.img/Juris.png);
+    height:900px;
+    background: url("../img/Juris.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:orange;
 }
+
 
 .cliffGrid{
         display: grid;
@@ -1100,6 +1259,213 @@ textarea::placeholder{
     position:relative;
 }
 
+#videoOverlay{
+    width:100%;
+    height:100%;   
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:30;
+    background: rgba(47, 72, 88, 0.9); 
+    display:none;
+}
+
+#videoOverlay #buttonBackground{
+    max-width:90px;
+}
+
+#videoOverlay #playButton{
+    max-width:100px;
+}
+
+
+#videoOverlay{
+    color:white;
+    font-size:36px;
+    font-weight:500px;
+    font-family: 'Oswald', sans-serif;
+    text-align:center;
+}
+
+.videoClose p{
+    margin-top:50px;   
+    text-align:right;
+}
+
+.videoClose p span{
+    cursor:pointer;
+    margin-right:5%;
+}
+
+.videoGrid{
+    max-width:1350px;  
+    width:100%;
+    /*position:relative;*/
+}
+
+#map{
+    height:800px;
+    width:100%;
+    position:relative;
+}
+
+.zoomButton{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10p;
+}
+
+.activePageBold li a{
+    font-weight:bold;
+}
+
+.background404{
+    background-color:#FFCB66;
+    min-height:800px;
+}
+
+.background404 p{
+    text-align:center;
+}
+
+
+
+.background404 p:nth-of-type(1){
+    margin-top:170px;
+    color:white;
+    font-weight:700;
+    font-size:96px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.background404 p:nth-of-type(2){
+    color:#2F4858;
+    font-weight:700;
+    font-size:36px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.background404 p:nth-of-type(3){
+    margin-top:40px;
+    color:#2F4858;
+    font-weight:400;
+    font-size:18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.background404 button{
+    font-family: 'Montserrat', sans-serif;
+    font-size:18px;
+    color:#FFCB66;
+    background-color:white;
+    border:none;
+    border-radius: 40px 40px 40px 40px;
+    outline:none;
+    width:185px;
+    height:50px;
+    display:block;
+    margin: 0 auto 0 auto;
+    margin-top:60px;
+}
+
+.background404 a{
+    text-decoration:none;
+}
+
+.mapMarkerDesc{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    background: rgba(255, 168, 0, 0.5);
+    opacity:1;
+    width:486px;
+    height: 175px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.mapMarkerDesc h6{
+    margin-right:20px;
+    margin-top:20px;
+    font-family: 'Oswald', sans-serif;
+    font-size:24px;
+    text-align:right;
+    font-weight:500;
+    color:#2F4858;
+}
+
+.mapMarkerDesc p{
+    margin-right:20px;
+    margin-top:40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:18px;
+    text-align:right;
+    font-weight:400;
+    color:#2F4858;
+    line-height:22px;
+}
+
+.mapMarkerDesc div{
+    position:relative;
+}
+
+.mapMarkerDesc img{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;   
+}
+
+.gm-style-iw-c > button{
+    display:none !important;
+    
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece, .gm-style .gm-style-iw-c, .gm-style .gm-style-iw-t::after{
+    background: rgba(255, 168, 0, 0.0);
+    box-shadow:none;
+    }
+
+
+.gmnoprint button{
+    padding-bottom:20px;;
+}
+
+.gm-style-mtc {
+  display: none;
+}
+
+.gm-fullscreen-control{
+    display:none;
+}
+
+.gm-svpc{
+    display:none;
+}
+
+.openMenuButton{
+        display:none;
+}
+
+#om{
+    position:absolute;
+    right:5%;
+    top:25%;
+    max-width:23px;
+    width:100%;
+    cursor:pointer;
+}
+
+#cm{
+    position:absolute;
+    right:8%;
+    top:25%;
+    max-width:23px;
+    width:100%;
+    cursor:pointer;
+}
+
 
 
 
@@ -1115,6 +1481,22 @@ textarea::placeholder{
        /*padding:0 7px;*/
        margin-right:25px;
     }
+    
+    .navGrid a{
+        font-size:17px;
+    }
+    
+    .navElement{
+        display:none;
+    }
+    .navGrid{
+        grid-template-columns: 22% auto;
+    }
+    
+    .openMenuButton{
+        display:block;
+    }
+    
 }
 
 @media only screen and (max-width: 1200px){
@@ -1124,7 +1506,10 @@ textarea::placeholder{
         .xButton{
         display:block;        
         right:10%;                
-    }                
+    }
+    .navGrid a{
+        display:none;
+    }    
 }
 
 
@@ -1522,24 +1907,24 @@ textarea::placeholder{
     }
     
     .grid-container{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap:0;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap:0;
+        grid-row-gap:14px;
+        margin-bottom:85px;
     }
         
-    .grid-container .grid-item:nth-of-type(even){
+    /*.grid-container .grid-item:nth-of-type(even){
         padding-left:18px;
     }
     .grid-container .grid-item:nth-of-type(odd){
         padding-right:18px;
-    }
-    
-    
+    }*/
+      
     .grid-container img{
         max-width:380px;
         padding-left:7px;
         padding-right:7px;
-        padding-bottom:12px;   
     }
     
 
@@ -1574,12 +1959,44 @@ textarea::placeholder{
     font-size:18px;
     }
 
-
     .pictureDescGridContainer2 p:nth-of-type(2){
     font-size:14px;
     }
     
+    /*.transPicDiv img{
+        padding:0;
+    }*/
     
+    /*.transPicDiv img:nth-of-type(even){
+        padding-left:24px;
+    }
+    .transPicDiv img:nth-of-type(odd){
+         padding-left:0px
+    }*/
+    
+    .pictureJurisRow{
+        background-position:65% 0;
+        height:500px;
+    }
+    
+    .videoClose p{
+    margin-top:200px;   
+    }
+    
+    .videoGrid{
+        max-width:400px;
+    }
+    
+    .xButton{
+        font-size:20px;
+        margin-top:30px;
+        
+        
+    }
+    
+    .gridNoPicture{
+        font-size: 6vw;
+    }
     
     
 }

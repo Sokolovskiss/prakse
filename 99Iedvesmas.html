@@ -24,29 +24,16 @@
 </head>
 <body>
 	<div class="container-fluid">   
-        <div class="row sparkleLogo">
-            <div class="col-md-2">
-            <a href="index.html">
-            <img class="logoImg" src="assets/img/BlackLogo3.jpg"></img>
-            </a>
-            </div>
-            <div class="col-md-10">
-                <nav class="navbar">
-                    <ul>
-                        <li class="navigacija"><a href="ideja.html">Ideja</a></li>    
-                        <li class="navigacija"><a href="sapnis.html">Piesaki sapni</a></li>
-                        <li class="navigacija"><a href="uznemejiem.html">Uzņēmējiem</a></li>
-                        <li class="navigacija"><a href="sapnuBanka.html">Sapņu banka</a></li>
-                        <li class="navigacija"><a href="sapnusAtbalsta.html">Sapņu atbalsta</a></li>
-                        <li class="navigacija activePage"><a href="#">99 Iedvesmas stāsti</a></li>
-                        <li class="navigacija"><a href="#">LV</a></li>
-                    </ul>
-                </nav>
-                <div class="wrapper">
-                <div class="xButton" onclick="showMenu()">&#10005;</div>
-                
-                </div>
-            </div>
+        <div class="row navGrid">
+            <div><img class="logoImg" src="assets/img/BlackLogo3.jpg" alt="Logo"></div>
+            <div class="navElement"><a href="ideja.html">Ideja</a></div>
+            <div class="navElement"><a href="sapnis.html">Piesaki sapni</a></div>
+            <div class="navElement"><a href="uznemejiem.html">Uzņēmējiem</a></div>
+            <div class="navElement"><a href="sapnuBanka.html">Sapņu banka</a></div>
+            <div class="navElement"><a href="sapnusAtbalsta.html">Sapņu atbalsta</a></div>
+            <div class="navElement"><a class="activePage" href="99Iedvesmas.html">99 Iedvesmas stāsti</a></div>
+            <div class="navElement"><a href="#">LV</a></div>
+            <div class="openMenuButton"><img id="om" src="assets/img/menu.png" onclick="showMenu()"></div>
         </div>
         
         <div class="row">
@@ -63,58 +50,156 @@
         <div class="row">
             <div class="grid-container">
                 <div class="gridContainerFreeSpace"></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><div class="t"><img class="gridPictureTransparent" src="assets/img/gridPictures/1.png"></div><div class="gridNumber"><p>1</p></div></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/2.png"><div class="gridNumber"><p>2</p></div></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/3.png"><div class="gridNumber"><p>3</p></div></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/4.png"><div class="gridNumber"><p>4</p></div></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>5</p></div></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/6.png"><div class="gridNumber"><p>6</p></div></div>
+                <div class="grid-item" id="Picture_1" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" id="picture1" src="assets/img/gridPictures/1.png"><div class="gridNumber"><p>1</p></div></div></div>
+                <div class="grid-item" id="Picture_2" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/2.png"><div class="gridNumber"><p>2</p></div></div></div>
+                <div class="grid-item" id="Picture_3" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/3.png"><div class="gridNumber"><p>3</p></div></div></div>
+                <div class="grid-item" id="Picture_4" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/4.png"><div class="gridNumber"><p>4</p></div></div></div>
+                <div class="grid-item" id="Arta Balode" onclick="openVideo(this.id)"><p class="gridNoPicture">Arta Balode</p><img src="assets/img/gridColor.png"><div class="gridNumber"><p>5</p></div></div>
+                <div class="grid-item" id="Picture_6" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/6.png"><div class="gridNumber"><p>6</p></div></div></div>
                <div class="gridContainerFreeSpace"></div>
                
                <div class="gridContainerFreeSpace"></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><p class="gridNumber">1</p></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
+                <div class="grid-item" id="Picture_7" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/7.png"><div class="gridNumber"><p>7</p></div></div></div>
+                <div class="grid-item" id="Picture_8" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/8.png"><div class="gridNumber"><p>8</p></div></div></div>
+                <div class="grid-item" id="Picture_9" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/9.png"><div class="gridNumber"><p>9</p></div></div></div>
+                <div class="grid-item" id="Picture_10" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/10.png"><div class="gridNumber"><p>10</p></div></div></div>
+                <div class="grid-item" id="Picture_11" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/11.png"><div class="gridNumber"><p>11</p></div></div></div>
+                <div class="grid-item" id="Picture_12" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/12.png"><div class="gridNumber"><p>12</p></div></div></div>
                <div class="gridContainerFreeSpace"></div>
                
                <div class="gridContainerFreeSpace"></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><p class="gridNumber">1</p></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
+                <div class="grid-item" id="Picture_13" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/13.png"><div class="gridNumber"><p>13</p></div></div></div>
+                <div class="grid-item" id="Picture_14" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/14-1.png"><div class="gridNumber"><p>14</p></div></div></div>
+                <div class="grid-item" id="Picture_15" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/15.png"><div class="gridNumber"><p>15</p></div></div></div>
+                <div class="grid-item" id="Picture_16" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/16.png"><div class="gridNumber"><p>16</p></div></div></div>
+                <div class="grid-item" id="Picture_17" onclick="openVideo(this.id)"><div class="transPicDiv"><img src="assets/img/gridColor.png"><img class="gridPictureTransparent" src="assets/img/gridPictures/17.png"><div class="gridNumber"><p>17</p></div></div></div>
+                <div class="grid-item" id="Coming Soon" onclick="openVideo(this.id)"><p class="gridNoPicture">Jauns stāsts tiks pievienots drīzumā</p><img src="assets/img/gridColor.png"><div class="gridNumber"><p>18</p></div></div>
                <div class="gridContainerFreeSpace"></div>
                
                <div class="gridContainerFreeSpace"></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"><p class="gridNumber">1</p></div>
-                <div class="grid-item"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
+                <div class="grid-item"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>19</p></div></div></div>
+                <div class="grid-item"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>20</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>21</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>22</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>23</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>24</p></div></div></div>
                <div class="gridContainerFreeSpace"></div>
                
                <div class="gridContainerFreeSpace"></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"><p class="gridNumber">1</p></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>25</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>26</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>27</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>28</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>29</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>30</p></div></div></div>
                <div class="gridContainerFreeSpace"></div>
                
                <div class="gridContainerFreeSpace"></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"><p class="gridNumber">1</p></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
-                <div class="grid-item hidden"><img src="assets/img/gridColor.png"/></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>31</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>32</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>33</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>34</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>35</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>36</p></div></div></div>
                <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>37</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>38</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>39</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>40</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>41</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>42</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>43</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>44</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>45</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>46</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>47</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>48</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>49</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>50</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>51</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>52</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>53</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>54</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>55</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>56</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>57</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>58</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>59</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>60</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>61</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>62</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>63</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>64</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>65</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>66</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>67</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>68</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>69</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>70</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>71</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>72</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>73</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>74</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>75</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>76</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>77</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>78</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>79</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>80</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>80</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>81</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>82</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>83</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>84</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>85</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>86</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>87</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>88</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>89</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>90</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>91</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>92</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>93</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>94</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>95</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+               
+               <div class="gridContainerFreeSpace"></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>96</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>97</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>98</p></div></div></div>
+                <div class="grid-item hidden"><div class="transPicDiv"><img src="assets/img/gridColor.png"><div class="gridNumber"><p>99</p></div></div></div>
+               <div class="gridContainerFreeSpace"></div>
+
             </div>
         </div>
         <div class="row">
@@ -129,9 +214,9 @@
         <div class="row">
             <div class="grid-container2">
                 <div></div>
-                <div class="grid-item2"><img src="assets/img/juris2.png"/><div class="pictureDescGridContainer2"><p>Juris Gogulis</p><p>Idejas ģenerators un režisors</p></div></div>
-                <div class="grid-item2"><img src="assets/img/girts.png"/><div class="pictureDescGridContainer2"><p>Ģirts Ceriņš</p><p>Operators un montāzas speciālists</p></div></div>
-                <div class="grid-item2"><img src="assets/img/janis.png"/><div class="pictureDescGridContainer2"><p>Jānis Zurģis</p><p>Animācijas un grafiskā dizaina meistars</p></div></div>
+                <div class="grid-item2"><img src="assets/img/juris2.png"/><img class="rectangle" src="assets/img/Rectangle.png"><div class="pictureDescGridContainer2"><p>Juris Gogulis</p><p>Idejas ģenerators un režisors</p></div></div>
+                <div class="grid-item2"><img src="assets/img/girts.png"/><img class="rectangle" src="assets/img/Rectangle.png"><div class="pictureDescGridContainer2"><p>Ģirts Ceriņš</p><p>Operators un montāzas speciālists</p></div></div>
+                <div class="grid-item2"><img src="assets/img/janis.png"/><img class="rectangle" src="assets/img/Rectangle.png"><div class="pictureDescGridContainer2"><p>Jānis Zurģis</p><p>Animācijas un grafiskā dizaina meistars</p></div></div>
                 <div></div>
             </div>
         </div>
@@ -194,21 +279,51 @@
         </div>       
     </div>
        
-    <div class="overlayMenu"onclick="showMenu()">
-        <ul id="OM">
-            <li><a href="index.html">Ideja</a></li>
-            <li><a href="index.html">Piesaki sapni</a></li>
-            <li><a href="index.html">Uzņēmējiem</a></li>
-            <li><a href="index.html">Sapņu banka</a></li>
-            <li><a href="index.html">Sapņu atbalsta</a></li>
-            <li><a href="index.html">99 Iedvesmas stāsti</a></li>   
-            <li><a href="index.html">LV</a></li>             
+     <div class="overlayMenu" id="OM">
+        <div class="row navGrid">
+            <div><img class="logoImg" src="assets/img/BlackLogo3.jpg" alt="Logo"></div>
+            <div class="openMenuButton"><img id="cm" src="assets/img/x.svg" onclick="showMenu()"></div>
+        </div>
+            
+            
+        <div id="overlayGrid">
+            <div></div>
+            <div class="activePageOM"><p>LV<p></div>
+            <div><p>EN</p></div>
+            <div><p>RU</p></div>
+            <div></div>
+        </div>
+    
+    
+        <ul>
+            <li><a href="ideja.html">Ideja</a></li>
+            <li><a href="sapnis.html">Piesaki sapni</a></li>
+            <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
+            <li><a href="sapnuBanka.html">Sapņu banka</a></li>
+            <li><a href="sapnusAtbalsta.html">Sapņu atbalsta</a></li>
+            <div class="activePageBold"><li><a class="activePageOM" href="99Iedvesmas.html">99 Iedvesmas stāsti</a></li></div>             
         </ul>
     </div>
     
     <div id="fixedAnchorLink" onclick="window.scrollTo(0, 0);">
     
     </div>
+    
+    <div id="videoOverlay">
+        <div class="row videoClose"><p><span onclick="closeVideo()">&#10005;<span></p></div>
+        <div class="row">
+            <div class="wrapper">
+                <video class="videoGrid" id="video" poster="assets/img/BRMEITA1.png">
+                    <source src="assets/img/vid.mkv" type="video/mp4">
+                </video>
+                    <img id="buttonBackground" src="assets/img/whiteCircle.png" alt="">
+                    <img id="playButton" src="assets/img/playButton.png" alt="">
+            </div>
+        </div>
+        <div class="row"><p id="videoName">Arta Balode<p></div>
+    </div>
+    
+    
     
     
    <!-- JavaScript -->
