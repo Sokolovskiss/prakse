@@ -30,12 +30,12 @@ div {
     
 }
 
-nav {
+/*nav {
     display:block;
     top:40px;
     margin-left:5%;
     border: 0px solid green;
-}
+}*/
 
 ul {
   list-style-type: none;
@@ -55,7 +55,7 @@ ul {
     text-align:center;
 }
 
-.navigacija{
+/*.navigacija{
   float: left;
   font-size:18px;
   font-family: 'Montserrat', sans-serif;
@@ -75,7 +75,7 @@ ul {
 .navigacija a:hover {
   color:gray;
   font-weight:bold;
-}
+}*/
 
 .navGrid {
   display:grid;
@@ -96,7 +96,7 @@ ul {
   text-decoration: none;
   color:black;
   position:absolute;
-  bottom:9px;
+  bottom:21px;
 }
 
 .navGrid a:hover {
@@ -104,8 +104,6 @@ ul {
   font-weight:bold;
 
 }
-
-
 
 .button1{
     width:233px;
@@ -183,11 +181,13 @@ ul {
 .teksts2{
     padding-left:1px;
 }
+
 .inputLauki{
     width:50%;
     position:relative;
     left:25%;
 }
+
 input{
     background-color:#C4C4C4;
     border:none;
@@ -243,8 +243,6 @@ input::placeholder{
     color:#2F4858;
 }
 
-
-
 textarea{
     font-size:18px;
     font-family: 'Montserrat', sans-serif;
@@ -255,9 +253,6 @@ textarea::placeholder{
     color:#2F4858;
 }
 
-
-
-
 .submitButton{
     width:182px;
     height:62px;
@@ -267,14 +262,12 @@ textarea::placeholder{
     color:white;
     display:block;
     margin: 0 auto 0 auto;
-    margin-top:50px;
+    margin-top:85px;
     font-size:24px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom:150px;
     outline:none;
 }
-
-
 
 .beigas{
     background-color:#365461;
@@ -284,14 +277,10 @@ textarea::placeholder{
     font-family: 'Montserrat', sans-serif;
 }
 
-
 #video{
     position:relative;
     width:100%;   
 }
-
-
-
 
 #playButton{
     position:absolute;
@@ -301,7 +290,6 @@ textarea::placeholder{
     left:50%;
     transform: translate(-50%, -50%);           
 }
-
 
 #buttonBackground{
     position:absolute;
@@ -333,7 +321,6 @@ textarea::placeholder{
     width:100%;   
     top:-40px;      
 }
-
 
 .anda{
     height:100%;
@@ -372,7 +359,6 @@ textarea::placeholder{
     color:white;
 }
 
-
 .atbalstitaji img{
     display:block;
     margin:0 auto 0 auto;
@@ -385,11 +371,11 @@ textarea::placeholder{
     max-width:80px;
 }
 
-
 .atbalstitajiTeksts{
     background-color:#FFCB66;
     
 }
+
 .atbalstitajiTeksts p{
     text-align:center;
     font-family: 'Oswald', sans-serif;
@@ -473,7 +459,7 @@ textarea::placeholder{
 .checkboxTxt p{
     margin-right:5%;
 }
-/**/
+
 .overlayMenu{  
     background-color:white;
     position:fixed;
@@ -542,7 +528,6 @@ textarea::placeholder{
   transform: rotate(45deg);
 }
 
-
 #fixedAnchorLink{
     position:fixed;
     bottom:20px;
@@ -554,7 +539,6 @@ textarea::placeholder{
     cursor:pointer;
     display:none;
 }
-
 
 .logoOverlayMenu img{
     position:absolute;
@@ -573,7 +557,7 @@ textarea::placeholder{
     color:white;
     text-align:center; 
     font-size:18px;
-    margin-bottom:50px;
+    margin-bottom:35px;
 }
 
 .overlayMenu li a{
@@ -594,7 +578,8 @@ textarea::placeholder{
     display: grid;
     grid-template-columns: auto 30px 30px 30px auto;
     grid-gap:15px;
-    margin-bottom:80px;
+    margin-top:38px;
+    margin-bottom:60px;
     width:100%;
     font-size:18px;
     font-weight:600;
@@ -645,7 +630,7 @@ textarea::placeholder{
     font-family: 'Oswald', sans-serif;
     color:#2F4858;
     margin-top:115px; 
-    margin-bottom:40px;
+    margin-bottom:60px;
 }
 
 
@@ -683,29 +668,32 @@ textarea::placeholder{
 }
 
 .titleKenLudden{
+    margin-top:40px;
     font-family: 'Oswald', sans-serif;
     font-size:24px;
     color:#2F4858;
 }
 
 .descKenLudden{
+    margin-top:-10px;
     font-family: 'Montserrat', sans-serif;
     font-size:18px;
     color:#2F4858;
-    margin-bottom:40px;
 }
 
 .textKenLudden{
+    margin-top:30px;
     font-family: 'Montserrat', sans-serif;
     font-size:24px;
     color:#2F4858;
     font-style:italic;
 }
 
-
-
 .arrow1, .arrow2{
+    margin-bottom:30px;
+    margin-top:20px;
     cursor:pointer;
+
 }
 
 .arrow2{
@@ -733,8 +721,6 @@ ul .activePageOM{
     border-bottom: 5px solid orange;
 }
 
-
-
 .textSapnis{
     margin-top:70px;
     margin-left:30%;
@@ -752,18 +738,18 @@ ul .activePageOM{
 
 .textBalloon{
     font-size: 18px;
-    margin-left:30%;
-    margin-right:30%;
+    margin-left:20%;
+    margin-right:20%;
     font-family: 'Montserrat', sans-serif;
     line-height:22px;
-    margin-bottom:150px;
+    margin-bottom:130px;
 }
 
 .titleBalloon{
     font-size:30px;
     font-weight:bold;
     font-family: 'Oswald', sans-serif;
-    margin-top:20px;
+    margin-top:50px;
 }
 
 .pictureBalloon{
@@ -779,7 +765,7 @@ ul .activePageOM{
     }
 
 .buttonSapnis{
-    width:25%;
+    width:233px;
     height:50px;
     background-color: orange;
     border:none;
@@ -804,13 +790,12 @@ ul .activePageOM{
 }
 
 .text99Iedvesmas{
-    margin-bottom:100px;
+    margin-bottom:150px;
 }
 
 .textSapnusAtbalsta{
     margin-bottom:80px;
 }
-
 
 .textMerkis{
     font-family: 'Montserrat', sans-serif;
@@ -837,20 +822,21 @@ ul .activePageOM{
 
 .textCliff{
     text-align:right;
-    margin-left:50%;
+    margin-left:25%;
     margin-right:5%;
-    margin-bottom:145px;
+    margin-bottom:100px;
 }
 
 .textSun, .textGlasses{
-    margin-right:50%;
+    margin-right:25%;
     margin-left:5%;
-    margin-bottom:145px;
+    margin-bottom:100px;
 }
 
+
 .titleMisija{
-    margin-top:10px;
-    margin-bottom:20px;
+    margin-top:73px;
+    margin-bottom:45px;
 }
 
 .textMisija{
@@ -859,7 +845,7 @@ ul .activePageOM{
     font-family: 'Montserrat', sans-serif;
     font-weight:bold;
     color:#2F4858;
-    margin-bottom:100px;
+    margin-bottom:125px;
 }
 
 .row.sapnuBankaOrangeBackground{
@@ -870,8 +856,8 @@ ul .activePageOM{
 .pictureTrees{
     display:block;
     margin: 0 auto 0 auto;
-    margin-top:150px;
-    max-width:150px;
+    margin-top:175px;
+    max-width:160px;
     width:100%;
 }
 
@@ -882,6 +868,7 @@ ul .activePageOM{
     max-width:300px;
     width:100%;
 }
+
 .textOrangeBackground{
     color:white;
     font-weight:bold;
@@ -889,12 +876,11 @@ ul .activePageOM{
     line-height:29.26px;
     text-align:center;
     font-family: 'Montserrat', sans-serif;
-    margin-left:29%;
-    margin-right:29%;
-    margin-top:30px;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:45px;
     margin-bottom:100px;
 }
-
 
 .titleSapnusAtlasis{
     font-family: 'Oswald', sans-serif;
@@ -903,7 +889,7 @@ ul .activePageOM{
     text-align:center;
     color:#2F4858;
     margin-bottom:60px;
-    margin-top:100px;
+    margin-top:130px;
 }
 
 .textSapnusAtlasis{
@@ -912,8 +898,8 @@ ul .activePageOM{
     font-weight:bold;
     text-align:center;
     font-size:24px;
-    margin-right:35%;
-    margin-left:35%;
+    margin-right:25%;
+    margin-left:25%;
     margin-bottom:120px;
 }
 
@@ -924,20 +910,19 @@ ul .activePageOM{
     width:100%;
 }
 
+.picturePeople{
+    max-width:200px;
+}
+
+
 .freespace{
     height:200px;
 }
 
 .title1SapnuBanka{
-    margin-top:-100px;
+    margin-top:-20px;
 }
 
-.dropdownBox{
-    background-color:#C4C4C4;
-    opacity:0.4;
-    width:100%;
-    border-radius:5px;
-}
 
 .dropdownBoxDesc{
     color:#FFA800;
@@ -948,29 +933,45 @@ ul .activePageOM{
 
 .leftDropdownBox, .rightDropdownBox{   
     margin-bottom:30px;
+    height:110px;
+    position:relative;   
 }
+
 
 .dropDownBoxGrid{
     display:grid;
-    grid-template-columns: auto 15% 15% auto;
+    grid-template-columns: auto 17% 17% auto;
     column-gap:0;
     position:relative;
 }
 
 .dropdownBox{
+    position:absolute;
+    background: rgba(196, 196, 196, 0.4);
+    width:90%;
+    border-radius:5px;
     color:#2F4858;
     font-size:18px;
     font-family: 'Montserrat', sans-serif;
     line-height:21.94px;
-    border:none;
+    border:0;
     padding-left:10px;
     padding-right:10px;
     height: 43px;
+    font-weight:700;
+    top:40%;
 }
 
+
+
+
+
+
+
+
 .selectedItemsGrid{
-    display:grid;
     grid-template-columns: 20% 15% 30% 15% 20%;
+    display:none;
 }
 
 
@@ -982,10 +983,7 @@ ul .activePageOM{
     font-family: 'Montserrat', sans-serif;
     font-weight:500;
     font-size:24px;
-    color:#2F4858;
-    
-
-    
+    color:#2F4858;    
 }
 
 .selectedItemsGrid p{
@@ -1001,29 +999,11 @@ ul .activePageOM{
     width:100%;
 }
 
-
-
-/**/
-
-
-
-
-
-
-
-
-
-
-
-
-/**/
-
-
 .grid-container{
     display: grid;
     grid-template-columns: 14% auto auto auto auto auto auto 14%;
     grid-gap: 1%;
-    margin-bottom:750px;
+    margin-bottom:35%;
 }
 
 .grid-container img{
@@ -1054,25 +1034,12 @@ ul .activePageOM{
     line-height:0;
 }
 
-
 .gridNumber p{
     position:absolute;
     bottom:0;
     right:15%;
     transform: translate(-15%, 0);
 }
-
-/*
-.gridNumber p{
-    width:100%;
-    position:absolute; 
-    bottom:0;
-    display:block;
-    margin: auto auto 0 auto;
-    transform:translateX(-5%);
-    border: 1px solid green;
-
-}*/
 
 .gridPictureTransparent{
     position:absolute;
@@ -1084,9 +1051,6 @@ ul .activePageOM{
     left:50%;
     transform:translateX(-50%);
 }
-
-
-
 
 .titleSparkleHeart{
     font-family: 'Oswald', sans-serif;
@@ -1102,7 +1066,6 @@ ul .activePageOM{
     font-size:18px;
     text-align:center;
     color:#2F4858;
-
 }
 
 .grid-container2{
@@ -1137,13 +1100,16 @@ ul .activePageOM{
 
 .grid-containerPictures2{
     display: grid;
-    grid-template-columns: 22% 22% 22% 34%;
-    
+    grid-template-columns: 22% 22% 22% 34%;    
+}
+
+.picRowSapnis{
+    margin-top:150px;
 }
 
 .gridNoPicture{
     position:absolute;
-    border: 1px solid blue;
+    border: 0 solid blue;
     bottom:0;
     left:50%;
     transform:translateX(-50%);
@@ -1157,8 +1123,6 @@ ul .activePageOM{
     font-size: 24px;
     font-size: 1.4vw;
 }
-
-
 
 #submitMessage1{
     text-align:center;
@@ -1186,25 +1150,23 @@ ul .activePageOM{
 }
 
 .pictureJurisRow{
-    height:900px;
+    height:720px;
     background: url("../img/Juris.png");
     background-repeat: no-repeat;
     background-size:cover;
     background-color:orange;
 }
 
-
 .cliffGrid{
         display: grid;
-        grid-template-columns: 55% 45%;    
+        grid-template-columns: 53% 47%;    
    }
 
 
 .glassesGrid, .sunGrid{
         display: grid;
-        grid-template-columns: 45% 55%;    
+        grid-template-columns: 40% 60%;    
    }
-
 
 #showMoreButton{
     display:block;
@@ -1232,7 +1194,6 @@ ul .activePageOM{
     margin-bottom:10px;
 }
 
-
 .pictureDescGridContainer2 p:nth-of-type(1){
     color:white;
     font-size:24px;
@@ -1243,7 +1204,6 @@ ul .activePageOM{
     margin-bottom:0;   
     width:80%;
 }
-
 
 .pictureDescGridContainer2 p:nth-of-type(2){
     color:white;
@@ -1300,7 +1260,6 @@ ul .activePageOM{
 .videoGrid{
     max-width:1350px;  
     width:100%;
-    /*position:relative;*/
 }
 
 #map{
@@ -1328,8 +1287,6 @@ ul .activePageOM{
 .background404 p{
     text-align:center;
 }
-
-
 
 .background404 p:nth-of-type(1){
     margin-top:170px;
@@ -1427,7 +1384,6 @@ ul .activePageOM{
     box-shadow:none;
     }
 
-
 .gmnoprint button{
     padding-bottom:20px;;
 }
@@ -1466,6 +1422,9 @@ ul .activePageOM{
     cursor:pointer;
 }
 
+.textSapnis{
+    margin-bottom:65px;
+}
 
 
 
@@ -1495,6 +1454,21 @@ ul .activePageOM{
     
     .openMenuButton{
         display:block;
+    }
+    
+        .dropDownBoxGrid{
+        grid-template-columns: auto;
+    }
+    
+    .dropdownBoxDesc{
+        position:absolute;
+        left:5%;
+    }
+    
+    .dropdownBox{
+        left:50%;       
+        transform:translateX(-50%);
+        width:90%;
     }
     
 }
@@ -1653,7 +1627,7 @@ ul .activePageOM{
         position:relative;
         float:left;       
         transform:scale(0.8,0.8);
-        max-width:200px;
+        max-width:140px;
     }
     
     .inputLauks1{
@@ -1680,7 +1654,7 @@ ul .activePageOM{
         margin: 0 auto 0 auto;
     }
     
-    .inputLauks3{
+    #inputLauks3{
         height:150px;
     }
     
@@ -1754,6 +1728,18 @@ ul .activePageOM{
        font-weight:bold;
    }
    
+   .contactUsRowSapnis{
+       margin-top:-25px;
+   }
+   
+   .contactUsRowSapnis form{
+       margin-top:-43px;
+   }
+   
+   .contactUsRowSapnis textarea{
+       height:50px;
+   }
+   
    input[type="text"]{
        font-size:14px;
    }
@@ -1764,7 +1750,12 @@ ul .activePageOM{
    .submitButton{
        margin-top:100px;
        margin-bottom:170px;
+       width:145px;
+       height:48px;
+       font-size:18px;
    }
+   
+   
    
    .atbalstitajiTeksts p{
        font-size:24px;
@@ -1781,16 +1772,17 @@ ul .activePageOM{
    }
    
    .titlePage{
-       margin-top:40px;
+       margin-top:68px;
    }
    .textSapnis{
        margin-top:30px;
        font-family: 'Montserrat', sans-serif;
        font-size:14px;
        font-weight:500;
-       margin-bottom:100px;
+       margin-bottom:45px;
    }
    .titleBalloon{
+       margin-top:30px;
        font-size:18px;
    }
 
@@ -1799,42 +1791,67 @@ ul .activePageOM{
        font-family: 'Montserrat', sans-serif;
        margin-left:10%;
        margin-right:10%;
+       line-height:14.6px;
    }
-   .buttonSapnis{
-       width:70%;
-       margin-top:70px;
-       margin-bottom:80px;
-   }
-   
+    
+    #submitMessage1{
+        font-size:18px;
+    }
+    
    #submitMessage2{
        margin-bottom:200px;
        margin-left:10%;
        margin-right:10%;
        line-height:17px;
+       font-size: 14px;
    }
 
     .pictureJurisText{
-        bottom:-50px;
+        bottom:-45px;
         font-size:18px;
-        margin-left:5%;
-        margin-right:5%;
+        line-height:27px;
+        margin-left:3%;
+        margin-right:3%;
         font-weight:500;
     }
     
     .titleKenLudden, .textKenLudden, .descKenLudden, .arrow1, .arrow2{
-        margin-right:5%;
-        margin-left:5%;
+        margin-right:3%;
+        margin-left:3%;
+    }
+    
+    .titleKenLudden{
+        font-size:18px;
+        margin-top:30px;
+    }
+    
+    .descKenLudden{
+        font-size:14px;
+        line-height:17px;
+        margin-top:10px;
+    }
+    
+    .textKenLudden{
+        margin-top:22px;
+       font-size:12px;
+       line-height:15px; 
+    }
+    
+    .arrow2{
+        margin-left:30px;
     }
     
     .textIdeja{
-        margin-top:40px;
-        margin-bottom:120px;
+        margin-top:30px;
+        margin-bottom:110px;
         font-size:12px;
+        line-height:14px;
     }
     
     .textUznemejiem{
         font-size:14px;
         margin-top:40px;
+        line-height:14px;
     }
     
     .title2Uznemejiem{
@@ -1851,7 +1868,7 @@ ul .activePageOM{
         float:none;
         display:block;
         margin: 0 auto 0 auto;
-        max-width:150px;
+        max-width:120px;
         width:100%;
     }
     
@@ -1859,6 +1876,8 @@ ul .activePageOM{
         margin-left:5%;
         margin-right:5%;
         text-align:center;
+        font-size:12px;
+        line-height:14.6px;
     }
     
     .glassesGrid, .sunGrid, .cliffGrid{
@@ -1878,6 +1897,8 @@ ul .activePageOM{
     
     .titleMisija{
         font-size:24px;
+        margin-top:20px;
+        margin-bottom:20px;
     }
     
     .textMisija{
@@ -1888,7 +1909,9 @@ ul .activePageOM{
         font-size: 18px;
         margin-left:5%;
         margin-right:5%;
+        margin-bottom:50x;
         font-weight:500;
+        line-height:22px;
     }
     
     .titleSapnusAtlasis{
@@ -1899,11 +1922,27 @@ ul .activePageOM{
         font-size:18px;
         margin-left:5%;
         margin-right:5%;
+        margin-bottom:50px;
+    }
+    
+    .rainbowRow{
+        margin-top:50px;
     }
     
     .title1SapnuBanka{
-        margin:1%;
+        margin-top:55px;
         font-size:18px;
+        margin-bottom:25px;
+        margin-left:5%;
+        margin-right:5%;
+    }
+    
+    .title1SapnuBanka2{
+        margin-top:10px;
+    }
+    
+    .freespace{
+        height:120px;
     }
     
     .grid-container{
@@ -1914,13 +1953,6 @@ ul .activePageOM{
         margin-bottom:85px;
     }
         
-    /*.grid-container .grid-item:nth-of-type(even){
-        padding-left:18px;
-    }
-    .grid-container .grid-item:nth-of-type(odd){
-        padding-right:18px;
-    }*/
-      
     .grid-container img{
         max-width:380px;
         padding-left:7px;
@@ -1968,7 +2000,7 @@ ul .activePageOM{
     }*/
     
     /*.transPicDiv img:nth-of-type(even){
-        padding-left:24px;
+        padding-left:24px;textSapnusAtlasis
     }
     .transPicDiv img:nth-of-type(odd){
          padding-left:0px
@@ -1976,7 +2008,7 @@ ul .activePageOM{
     
     .pictureJurisRow{
         background-position:65% 0;
-        height:500px;
+        height:450px;
     }
     
     .videoClose p{
@@ -1989,17 +2021,90 @@ ul .activePageOM{
     
     .xButton{
         font-size:20px;
-        margin-top:30px;
-        
-        
+        margin-top:30px;     
     }
     
     .gridNoPicture{
         font-size: 6vw;
     }
     
+    .titleSapnuBanka{
+        margin-top:65px;
+        font-size:36px;
+    }
     
+    .titleMerkis{
+        margin-top:100px;
+        font-size:24px;
+    }
+    
+     .textSun, .textCliff, .textGlasses{
+        margin-bottom:70px;
+    }
+    
+    .pictureTrees{
+        margin-top:140px;
+        margin-bottom:0;
+        max-width:120px;
+    }
+    
+    .pictureRainbow{
+        margin-top:90px;
+        margin-bottom:0;
+        max-width:300px;
+    }
+    
+    .pictureMegaphone{
+        max-width:100px;
+    }
+    
+    .picturePeople{
+        max-width:130px;
+    }
+    
+    .text99Iedvesmas{
+        
+    }
+    .grid-container{
+        margin-bottom:16%;
+    }
+    
+    .titleSparkleHeart{
+        font-size:24px;
+    }
+    .textSparkleHeart{
+        font-size:14px;
+        line-height:17px;
+    }         
+    
+    .mapMarkerDesc{
+        grid-template-columns:auto;
+        width: 290px;
+        height:200px;
+    }
+    
+    .mapMarkerDesc p{
+        font-size:14px;
+        line-height:17px;
+        margin-bottom:-30px;
+    }
+    
+    .mapMarkerDesc h6{
+        font-size:16px;
+        margin-bottom:-20px;
+    }
+    
+    .mapMarkerDesc img{
+        position:relative;
+        float:right;
+        margin-right:25px;
+        margin-top:15px;
+        margin-bottom:-30px;
+        
+    }
 }
+
+   
 
 
 

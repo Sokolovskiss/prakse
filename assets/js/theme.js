@@ -14,9 +14,7 @@ function showMenu(){
     }else{
         cm.style.display = "none";    
         om.style.display = "block";   
-    }
-    
-    
+    }      
 }
 
 window.onscroll = function() {scrollUp()};
@@ -88,16 +86,6 @@ function closeVideo(){
     gridVideo.style.display = 'none';
 }
 
-/*function showSelectedBussines(){
-    var type = document.getElementById("a");
-    
-    /*if(type.options[type.selectedIndex].value == 'food'{
-        alert(type.options[type.selectedIndex].value);
-    }
-    
-    
-    
-}*/
 
 
 
@@ -111,11 +99,13 @@ function closeVideo(){
 
 
 
-
-function initMap() {
+/* google maps */
+var map;
+var markersArray = [];
+function initMap(loc){
      var options = {
      zoom:14,
-     center:{lat:56.946285, lng:24.105078},
+     center: loc,
      zoomControl: true,
      styles:[
     {
@@ -207,8 +197,8 @@ function initMap() {
     }
 ]
         }
-    
-    var map = new google.maps.Map(document.getElementById('map'),options);
+    markersArray = [];
+    map = new google.maps.Map(document.getElementById('map'),options);
     
     var customZoomInControlDiv = document.createElement('div');
     var customZoomInControl = new CustomZoomInControl(customZoomInControlDiv, map);
@@ -220,20 +210,40 @@ function initMap() {
     map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(customZoomInControlDiv);
     map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(customZoomOutControlDiv);
     
+    //Riga
     addMarker({coords:{lat:56.955100, lng:24.1046299}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
     addMarker({coords:{lat:56.93412713448401, lng:24.097076887048075}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
     addMarker({coords:{lat:56.941338175913465, lng:24.08016824251415}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test2</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
-    addMarker({coords:{lat:56.94717329824607, lng:24.165581584535094}});
-    addMarker({coords:{lat:56.94202350256237, lng:24.126271131760802}});
-    addMarker({coords:{lat:56.947828675766736, lng:24.114083174787112}});
-    addMarker({coords:{lat:56.95428820916915, lng:24.118031386201125}});
+    addMarker({coords:{lat:56.94717329824607, lng:24.165581584535094}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test3</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
+    addMarker({coords:{lat:56.94202350256237, lng:24.126271131760802}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test4</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
+    addMarker({coords:{lat:56.947828675766736, lng:24.114083174787112}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test5</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
+    addMarker({coords:{lat:56.95428820916915, lng:24.118031386201125}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test6</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
     
-    function addMarker(props){
-        var marker = new google.maps.Marker({
+    //Jelgava
+    addMarker({coords:{lat:56.65113949683316, lng:23.728744441226375}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+    addMarker({coords:{lat:56.65215394273031, lng:23.728036338100008}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+    addMarker({coords:{lat:56.6525667908046, lng:23.726319724460325}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test2</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+    addMarker({coords:{lat:56.65018400538949, lng:23.728529864521416}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test3</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+    addMarker({coords:{lat:56.649086929799374, lng:23.728465491509926}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test4</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+    addMarker({coords:{lat:56.64719941323011, lng:23.72943108668225}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test5</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+        
+    //Ogre  
+    addMarker({coords:{lat:56.81732998746353, lng:24.59903922324193}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+    addMarker({coords:{lat:56.80722878565132, lng:24.611398842736396}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+    addMarker({coords:{lat:56.81150451035851, lng:24.623500968896174}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test2</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+    addMarker({coords:{lat:56.814229443020665, lng:24.630925322887805}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test3</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+    addMarker({coords:{lat:56.815662302256534, lng:24.62358679957816}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test4</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+    addMarker({coords:{lat:56.816625340790296, lng:24.619681503547877}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test5</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+    addMarker({coords:{lat:56.81775276908641, lng:24.617449905816287}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test6</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'}); 
+ }  
+
+var marker;
+function addMarker(props){
+            var marker = new google.maps.Marker({
              position:props.coords,
              map:map,
              icon:'assets/img/pin.png',
-         });
+         });      
        
         if(props.content){
             var infoWindow = new google.maps.InfoWindow({
@@ -259,18 +269,117 @@ function initMap() {
                 }else{
                     marker.setIcon("assets/img/pinSelected.png");
                 }
-                
-                
+                               
             });
-            
-        
-        
-        
+                                  
         }      
-    }
         
- }   
+    //;
+       markersArray.push(marker);
+    }
+
+
+
+function clearOverlays() {
+    
+  for (var i = 0; i < markersArray.length; i++ ) {
+    markersArray[i].setMap(null);
+  }
+  markersArray.length = 0;
+}
+
+
  
+ 
+ function changeLocation(){
+    var loc = document.getElementById("location");
+    var type = document.getElementById("activity");
+    var b = document.getElementsByClassName("selectedItemsGrid");
+    
+    
+    
+    for (i = 0; i < b.length; i++){
+        b[i].style.display = 'none';
+    }   
+       
+    switch(loc.options[loc.selectedIndex].value){
+        case "Ogre":{ initMap({lat: 56.81315313434528, lng:24.60297783265565})      
+        };
+        break;
+        case "Rīga": initMap({lat: 56.946285, lng:24.105078});
+        break;
+        case "Jelgava": initMap({lat: 56.65134582941394, lng:23.72147041775676});
+        break;
+        }
+        
+        
+}
+ 
+ 
+function showSelectedBussines(){
+    var loc = document.getElementById("location");
+    var type = document.getElementById("activity");
+    var b = document.getElementsByClassName("selectedItemsGrid");
+    
+    clearOverlays();
+    
+    for (i = 0; i < b.length; i++){
+        b[i].style.display = 'none';
+    }   
+    
+
+    if(loc.options[loc.selectedIndex].value == "Rīga"){
+        switch(type.options[type.selectedIndex].value){
+            case "food":{
+                b[0].style.display = 'grid';
+                b[1].style.display = 'grid';
+                addMarker({coords:{lat:56.955100, lng:24.1046299}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
+                addMarker({coords:{lat:56.93412713448401, lng:24.097076887048075}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
+            }
+            break;
+            case "washing":{
+                b[2].style.display = 'grid';
+                addMarker({coords:{lat:56.941338175913465, lng:24.08016824251415}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test2</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});               
+            }
+            break;
+        }     
+    }
+
+    if(loc.options[loc.selectedIndex].value == "Jelgava"){
+        switch(type.options[type.selectedIndex].value){
+            case "food":{
+                b[3].style.display = 'grid';
+                addMarker({coords:{lat:56.65113949683316, lng:23.728744441226375}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+            }
+            break;
+            case "washing":{
+                b[4].style.display = 'grid';
+                addMarker({coords:{lat:56.65215394273031, lng:23.728036338100008}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+                }
+            break;
+        }     
+    }  
+
+    if(loc.options[loc.selectedIndex].value == "Ogre"){
+        switch(type.options[type.selectedIndex].value){
+            case "food":{
+                b[5].style.display = 'grid';
+                addMarker({coords:{lat:56.81732998746353, lng:24.59903922324193}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+            }
+            break;
+            case "washing":{
+                b[6].style.display = 'grid';
+                addMarker({coords:{lat:56.80722878565132, lng:24.611398842736396}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+                }
+            break;
+        }     
+    }     
+}
+ 
+ 
+ 
+ 
+ /* zoom pogas*/
  
  function CustomZoomInControl(controlDiv, map) {
     // Set CSS for the control border
@@ -340,10 +449,15 @@ function initMap() {
     });
 
 }
+
+
+
+
+
+
+
+
  
-
-
-/*{lat:56.9576281224652, lng:24.118362897729064}*/
 
 
 

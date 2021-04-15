@@ -22,10 +22,10 @@
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
 </head>
-<body>
+<body onload="initMap({lat: 56.946285, lng:24.105078});">
 	<div class="container-fluid">    
         <div class="row navGrid">
-            <div><img class="logoImg" src="assets/img/BlackLogo3.jpg" alt="Logo"></div>
+            <div><img class="logoImg" src="assets/img/BlackLogo3.jpg" onclick="location.href='index.html';" alt="Logo"></div>
             <div class="navElement"><a href="ideja.html">Ideja</a></div>
             <div class="navElement"><a href="sapnis.html">Piesaki sapni</a></div>
             <div class="navElement"><a href="uznemejiem.html">Uzņēmējiem</a></div>
@@ -33,7 +33,7 @@
             <div class="navElement"><a class="activePage" href="sapnusAtbalsta.html">Sapņu atbalsta</a></div>
             <div class="navElement"><a href="99Iedvesmas.html">99 Iedvesmas stāsti</a></div>
             <div class="navElement"><a href="#">LV</a></div>
-            <div class="openMenuButton"><img id="om" src="assets/img/menu.png" onclick="showMenu()"></div>
+            <div class="openMenuButton"><img id="om" src="assets/img/menu.png" onclick="showMenu()" alt="Menu"></div>
         </div>
         
         <div class="row">
@@ -53,7 +53,7 @@
             <div></div>
                 <div class="leftDropdownBox">
                 <p class="dropdownBoxDesc">Uzņēmuma atrašanās vieta</p>
-                <select class="dropdownBox location" name="location">
+                <select class="dropdownBox" id="location" name="location" onchange="changeLocation();">
                     <option selected disabled hidden>Izvēlieties</option>
                     <option value="Rīga">Rīga</option>
                     <option value="Jelgava">Jelgava</option>
@@ -64,12 +64,12 @@
             
             <div class="rightDropdownBox">
                 <p class="dropdownBoxDesc">Uzņēmuma veids</p>
-                <select class="dropdownBox activity" id="a" name="activity">
+                <select class="dropdownBox activity" id="activity" name="activity" onchange="showSelectedBussines();">
                     <option selected disabled hidden>Izvēlieties</option>
                     <option value="food">Ēdināšana</option>
                     <option value="washing">Mazgāšana</option>
                 </select>
-                <button onclick="showSelectedBussines()">a</button>
+                
             </div>
             <div></div>
             </div>        
@@ -77,11 +77,62 @@
     <div class="row">
         <div class="selectedItemsGrid">
             <div></div>
-            <div><img src="assets/img/purch.jpg"></div>
+            <div><img src="assets/img/purch.jpg" alt="Purch"></div>
             <div><h6>PURCH restaurant</h6></div>
-            <div><p>+371 254254<br>Dzelzavas iela 51A</p></div>
+            <div><p>+371 25425254<br>Dzelzavas iela 51A</p></div>
             <div></div>
         </div>
+        
+        <div class="selectedItemsGrid">
+            <div></div>
+            <div><img src="assets/img/KURTS1.jpg" alt="Purch"></div>
+            <div><h6>Kurts coffee</h6></div>
+            <div><p>+371 23202079<br>Cēsu iela 20, Tērbatas iela 2i</p></div>
+            <div></div>
+        </div>
+
+        <div class="selectedItemsGrid">
+            <div></div>
+            <div><img src="assets/img/purch.jpg" alt="Purch"></div>
+            <div><h6>Placeholder</h6></div>
+            <div><p>+371 88888888<br>Lielā iela 21</p></div>
+            <div></div>
+        </div>  
+
+        <div class="selectedItemsGrid">
+            <div></div>
+            <div><img src="assets/img/purch.jpg" alt="Purch"></div>
+            <div><h6>Placeholder_2</h6></div>
+            <div><p>+371 88888888<br>Lielā iela 21</p></div>
+            <div></div>
+        </div>
+
+        <div class="selectedItemsGrid">
+            <div></div>
+            <div><img src="assets/img/purch.jpg" alt="Purch"></div>
+            <div><h6>Placeholder_3</h6></div>
+            <div><p>+371 88888888<br>Lielā iela 21</p></div>
+            <div></div>
+        </div>
+        
+        <div class="selectedItemsGrid">
+            <div></div>
+            <div><img src="assets/img/purch.jpg" alt="Purch"></div>
+            <div><h6>Placeholder_4</h6></div>
+            <div><p>+371 88888888<br>Mazā iela 21</p></div>
+            <div></div>
+        </div>
+        
+        <div class="selectedItemsGrid">
+            <div></div>
+            <div><img src="assets/img/purch.jpg" alt="Purch"></div>
+            <div><h6>Placeholder_5</h6></div>
+            <div><p>+371 88888888<br>Mazā iela 21</p></div>
+            <div></div>
+        </div> 
+
+
+        
     </div>
         <!--karte-->
     <div id="map"></div>
@@ -92,12 +143,12 @@
         
          <div class="row">
             <div class="wrapper">
-            <img src="assets/img/ripped67.png" class="ripped"></img>
+            <img src="assets/img/ripped67.png" class="ripped" alt="">
             </div>
         </div>      
         <div class="row logo">
             <div class="col-md-2">
-                <img class="goldenImg" src="assets/img/GoldenV2Logo3.png"></img>
+                <img class="goldenImg" src="assets/img/GoldenV2Logo3.png" alt="SparkleHeartGolden">
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-2">
@@ -126,8 +177,8 @@
                 <li>Biķernieku iela 24a - 5, LV-1006</li>
                 <li class="rekviziti">Skatīt rekvizītus</li>
                 </ul>
-                <img class="ig" src="assets/img/ig.png"/>
-                <img class="fb" src="assets/img/facebook.png"/>
+                <img class="ig" src="assets/img/ig.png" alt="instagram">
+                <img class="fb" src="assets/img/facebook.png" alt="facebook">
                 
             </div>
         </div>
@@ -148,7 +199,7 @@
      <div class="overlayMenu" id="OM">
         <div class="row navGrid">
             <div><img class="logoImg" src="assets/img/BlackLogo3.jpg" alt="Logo"></div>
-            <div class="openMenuButton"><img id="cm" src="assets/img/x.svg" onclick="showMenu()"></div>
+            <div class="openMenuButton"><img id="cm" src="assets/img/x.svg" onclick="showMenu()" alt="X"></div>
         </div>
             
             
@@ -177,7 +228,6 @@
     
     
    <!-- JavaScript -->
-	<script type="text/javascript" src="assets/js/theme.js"></script>
-	<script type="text/javascript" src="assets/js/googleMap.json"></script>
+	<script src="assets/js/theme.js"></script>
      </body>
 </html>
