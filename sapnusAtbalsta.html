@@ -53,22 +53,26 @@
             <div></div>
                 <div class="leftDropdownBox">
                 <p class="dropdownBoxDesc">Uzņēmuma atrašanās vieta</p>
-                <select class="dropdownBox" id="location" name="location" onchange="changeLocation();">
-                    <option selected disabled hidden>Izvēlieties</option>
-                    <option value="Rīga">Rīga</option>
-                    <option value="Jelgava">Jelgava</option>
-                    <option value="Ogre">Ogre</option>
-                </select>
+                    <div class="custom-select">
+                      <select id="location">
+                        <option>Izvēlēties:</option>
+                        <option>Rīga</option>
+                        <option>Jelgava</option>
+                        <option>Ogre</option>
+                      </select>
+                    </div>
                 </div>
             
             
             <div class="rightDropdownBox">
                 <p class="dropdownBoxDesc">Uzņēmuma veids</p>
-                <select class="dropdownBox activity" id="activity" name="activity" onchange="showSelectedBussines();">
-                    <option selected disabled hidden>Izvēlieties</option>
-                    <option value="food">Ēdināšana</option>
-                    <option value="washing">Mazgāšana</option>
-                </select>
+                <div class="custom-select2">
+                  <select id="activity">
+                    <option>Izvēlēties:</option>
+                    <option>Ēdināšana</option>
+                    <option>Mazgāšana</option>
+                  </select>
+                </div>
                 
             </div>
             <div></div>
@@ -79,7 +83,7 @@
             <div></div>
             <div><img src="assets/img/purch.jpg" alt="Purch"></div>
             <div><h6>PURCH restaurant</h6></div>
-            <div><p>+371 25425254<br>Dzelzavas iela 51A</p></div>
+            <div><div class="selectedItemsGridWrapper"><p>+371 25425254<br>Dzelzavas iela 51A</p></div></div>
             <div></div>
         </div>
         
@@ -87,7 +91,7 @@
             <div></div>
             <div><img src="assets/img/KURTS1.jpg" alt="Purch"></div>
             <div><h6>Kurts coffee</h6></div>
-            <div><p>+371 23202079<br>Cēsu iela 20, Tērbatas iela 2i</p></div>
+            <div><div class="selectedItemsGridWrapper"><p>+371 23202079<br>Cēsu iela 20, Tērbatas iela 2i</p></div></div>
             <div></div>
         </div>
 
@@ -95,7 +99,7 @@
             <div></div>
             <div><img src="assets/img/purch.jpg" alt="Purch"></div>
             <div><h6>Placeholder</h6></div>
-            <div><p>+371 88888888<br>Lielā iela 21</p></div>
+            <div><div class="selectedItemsGridWrapper"><p>+371 88888888<br>Lielā iela 21</p></div></div>
             <div></div>
         </div>  
 
@@ -103,7 +107,7 @@
             <div></div>
             <div><img src="assets/img/purch.jpg" alt="Purch"></div>
             <div><h6>Placeholder_2</h6></div>
-            <div><p>+371 88888888<br>Lielā iela 21</p></div>
+            <div><div class="selectedItemsGridWrapper"><p>+371 88888888<br>Lielā iela 21</p></div></div>
             <div></div>
         </div>
 
@@ -111,7 +115,7 @@
             <div></div>
             <div><img src="assets/img/purch.jpg" alt="Purch"></div>
             <div><h6>Placeholder_3</h6></div>
-            <div><p>+371 88888888<br>Lielā iela 21</p></div>
+            <div><div class="selectedItemsGridWrapper"><p>+371 88888888<br>Lielā iela 21</p></div></div>
             <div></div>
         </div>
         
@@ -119,7 +123,7 @@
             <div></div>
             <div><img src="assets/img/purch.jpg" alt="Purch"></div>
             <div><h6>Placeholder_4</h6></div>
-            <div><p>+371 88888888<br>Mazā iela 21</p></div>
+            <div><div class="selectedItemsGridWrapper"><p>+371 88888888<br>Mazā iela 21</p></div></div>
             <div></div>
         </div>
         
@@ -127,7 +131,7 @@
             <div></div>
             <div><img src="assets/img/purch.jpg" alt="Purch"></div>
             <div><h6>Placeholder_5</h6></div>
-            <div><p>+371 88888888<br>Mazā iela 21</p></div>
+            <div><div class="selectedItemsGridWrapper"><p>+371 88888888<br>Mazā iela 21</p></div></div>
             <div></div>
         </div> 
 
@@ -135,16 +139,20 @@
         
     </div>
         <!--karte-->
-    <div id="map"></div>
+    <div class="row">
+        <div class="wrapper">
+            <div id="map">
+            </div>
+            <div class="blueRippedEffect">
+            </div>
+        </div>
+    </div>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpHcD1hOJ5vv-caWFNqcmhC5G_baWKXMw&callback=initMap&libraries=&v=weekly" async></script>
         
         
         
          <div class="row">
-            <div class="wrapper">
-            <img src="assets/img/ripped67.png" class="ripped" alt="">
-            </div>
         </div>      
         <div class="row logo">
             <div class="col-md-2">

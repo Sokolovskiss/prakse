@@ -1,3 +1,246 @@
+var x, i, j, l, ll, selElmnt, a, b, c, s;
+s = document.getElementById("location");
+act = document.getElementById("activity");
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+x2 = document.getElementsByClassName("custom-select2");
+
+
+var biz = document.getElementsByClassName("selectedItemsGrid");
+function clearGrid(){
+    for (sk = 0; sk < biz.length; sk++){         
+          biz[sk].style.display = 'none';                    
+    } 
+}
+
+l = x.length;
+for (i = 0; i < l; i++) {    
+  selElmnt = document.getElementById("location");
+  leftDropdownBox = document.getElementsByClassName("leftDropdownBox");
+  ll = selElmnt.length;
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {        
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, h, sl, yl;
+        //s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        //s = document.getElementById("location");
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+
+        
+        
+        
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;           
+            switch(s.selectedIndex){
+                case 3:{ initMap({lat: 56.81315313434528, lng:24.60297783265565});
+                        clearGrid();
+                };
+                break;
+                case 1:{initMap({lat: 56.946285, lng:24.105078});
+                        clearGrid();
+                }
+                break;
+                case 2:{initMap({lat: 56.65134582941394, lng:23.72147041775676});
+                        clearGrid();
+                }
+                break;
+                }
+                
+                  
+            
+            
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/     
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+      
+    });
+}
+
+for (i = 0; i < x2.length; i++) {
+    var biz = document.getElementsByClassName("selectedItemsGrid");
+    
+  
+  selElmnt = document.getElementById("activity");
+  ll = selElmnt.length;
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x2[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, h, sl, yl;
+        //s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        act = document.getElementById("activity");
+        sl = act.length;
+        h = this.parentNode.previousSibling;
+        
+        for (i = 0; i < sl; i++) {
+          if (act.options[i].innerHTML == this.innerHTML) {
+            act.selectedIndex = i;
+            
+            
+            
+            if(s.selectedIndex == 1 || s.selectedIndex == 0){
+                switch(act.selectedIndex){
+                    case 1:{
+                        clearOverlays()
+                        clearGrid();
+                        biz[0].style.display = 'grid';
+                        biz[1].style.display = 'grid';
+                        addMarker({coords:{lat:56.955100, lng:24.1046299}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
+                        addMarker({coords:{lat:56.93412713448401, lng:24.097076887048075}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
+                    }
+                    break;
+                    case 2:{
+                        clearOverlays()
+                        clearGrid();
+                        biz[2].style.display = 'grid';
+                        addMarker({coords:{lat:56.941338175913465, lng:24.08016824251415}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test2</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});               
+                    }
+                    break;
+                }               
+            }
+         
+         if(s.selectedIndex == 2){
+             switch(act.selectedIndex){
+                    case 1:{
+                        clearOverlays()
+                        clearGrid();
+                        biz[3].style.display = 'grid';
+                        addMarker({coords:{lat:56.65113949683316, lng:23.728744441226375}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
+                    }
+                    break;
+                    case 2:{
+                        clearOverlays()
+                        clearGrid();
+                        biz[4].style.display = 'grid';
+                        addMarker({coords:{lat:56.65215394273031, lng:23.728036338100008}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});                       
+                    }
+                    break;
+                }               
+         }
+         
+         if(s.selectedIndex == 3){
+             switch(act.selectedIndex){
+                    case 1:{
+                        clearOverlays()
+                        clearGrid();
+                        biz[5].style.display = 'grid';
+                        addMarker({coords:{lat:56.81732998746353, lng:24.59903922324193}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
+                    }
+                    break;
+                    case 2:{
+                        clearOverlays()
+                        clearGrid();
+                        biz[6].style.display = 'grid';
+                        addMarker({coords:{lat:56.81775276908641, lng:24.617449905816287}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test6</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'}); 
+                    }
+                    break;
+                }               
+         }     
+        
+            
+            
+            
+            
+            
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x2[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+
+
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+
 function showMenu(){   
     var x = document.getElementById('OM');
     var om = document.getElementById('om');
@@ -90,15 +333,6 @@ function closeVideo(){
 
 
 
-
-
-
-
-
-
-
-
-
 /* google maps */
 var map;
 var markersArray = [];
@@ -106,7 +340,7 @@ function initMap(loc){
      var options = {
      zoom:14,
      center: loc,
-     zoomControl: true,
+     zoomControl: false,
      styles:[
     {
         "featureType": "administrative",
@@ -271,10 +505,16 @@ function addMarker(props){
                 }
                                
             });
-                                  
+            
+         google.maps.event.addListener(map, 'click', function() {                                                
+                 infoWindow.close(map, marker);
+                  marker.setIcon("assets/img/pin.png");   
+                 
+                               
+            });   
+                                                      
         }      
-        
-    //;
+
        markersArray.push(marker);
     }
 
@@ -288,96 +528,6 @@ function clearOverlays() {
   markersArray.length = 0;
 }
 
-
- 
- 
- function changeLocation(){
-    var loc = document.getElementById("location");
-    var type = document.getElementById("activity");
-    var b = document.getElementsByClassName("selectedItemsGrid");
-    
-    
-    
-    for (i = 0; i < b.length; i++){
-        b[i].style.display = 'none';
-    }   
-       
-    switch(loc.options[loc.selectedIndex].value){
-        case "Ogre":{ initMap({lat: 56.81315313434528, lng:24.60297783265565})      
-        };
-        break;
-        case "Rīga": initMap({lat: 56.946285, lng:24.105078});
-        break;
-        case "Jelgava": initMap({lat: 56.65134582941394, lng:23.72147041775676});
-        break;
-        }
-        
-        
-}
- 
- 
-function showSelectedBussines(){
-    var loc = document.getElementById("location");
-    var type = document.getElementById("activity");
-    var b = document.getElementsByClassName("selectedItemsGrid");
-    
-    clearOverlays();
-    
-    for (i = 0; i < b.length; i++){
-        b[i].style.display = 'none';
-    }   
-    
-
-    if(loc.options[loc.selectedIndex].value == "Rīga"){
-        switch(type.options[type.selectedIndex].value){
-            case "food":{
-                b[0].style.display = 'grid';
-                b[1].style.display = 'grid';
-                addMarker({coords:{lat:56.955100, lng:24.1046299}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
-                addMarker({coords:{lat:56.93412713448401, lng:24.097076887048075}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});
-            }
-            break;
-            case "washing":{
-                b[2].style.display = 'grid';
-                addMarker({coords:{lat:56.941338175913465, lng:24.08016824251415}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test2</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Rīga</p></div></div>'});               
-            }
-            break;
-        }     
-    }
-
-    if(loc.options[loc.selectedIndex].value == "Jelgava"){
-        switch(type.options[type.selectedIndex].value){
-            case "food":{
-                b[3].style.display = 'grid';
-                addMarker({coords:{lat:56.65113949683316, lng:23.728744441226375}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
-            }
-            break;
-            case "washing":{
-                b[4].style.display = 'grid';
-                addMarker({coords:{lat:56.65215394273031, lng:23.728036338100008}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Jelgava</p></div></div>'});
-                }
-            break;
-        }     
-    }  
-
-    if(loc.options[loc.selectedIndex].value == "Ogre"){
-        switch(type.options[type.selectedIndex].value){
-            case "food":{
-                b[5].style.display = 'grid';
-                addMarker({coords:{lat:56.81732998746353, lng:24.59903922324193}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>AUCH beuty home</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
-            }
-            break;
-            case "washing":{
-                b[6].style.display = 'grid';
-                addMarker({coords:{lat:56.80722878565132, lng:24.611398842736396}, content:'<div class="mapMarkerDesc"><div><img src="assets/img/AUCHlogo1.png"></div><div><h6>Test1</h6><p>+371 28361686, +371 23202079<br>auchbeuty@gmail.com<br>Cēsu iela 20, Ogre</p></div></div>'});
-                }
-            break;
-        }     
-    }     
-}
- 
- 
- 
  
  /* zoom pogas*/
  
@@ -389,11 +539,11 @@ function showSelectedBussines(){
     controlUI.style.cursor = 'pointer';  
     controlUI.style.position = 'absolute';
     controlUI.style.bottom = '180px';
-    controlUI.style.right = '200px;';
+    controlUI.style.right = '-220px';
     controlUI.style.textAlign = 'center';
     controlUI.style.width = '50px';
     controlUI.style.height = '50px';
-    
+    controlUI.classList.add("zoomButtons");
     controlDiv.appendChild(controlUI);
     
     
@@ -424,11 +574,11 @@ function showSelectedBussines(){
     controlUI.style.cursor = 'pointer';
     controlUI.style.position = 'absolute';
     controlUI.style.bottom = '100px';
-    controlUI.style.left = '0';
+    controlUI.style.right = '-220px';
     controlUI.style.textAlign = 'center';
     controlUI.style.width = '50px';
     controlUI.style.height = '50px';
-    
+    controlUI.classList.add("zoomButtons");
     controlDiv.appendChild(controlUI);
 
     // Set CSS for the control interior

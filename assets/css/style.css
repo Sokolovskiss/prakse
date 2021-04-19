@@ -30,13 +30,6 @@ div {
     
 }
 
-/*nav {
-    display:block;
-    top:40px;
-    margin-left:5%;
-    border: 0px solid green;
-}*/
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -54,28 +47,6 @@ ul {
     cursor:pointer;
     text-align:center;
 }
-
-/*.navigacija{
-  float: left;
-  font-size:18px;
-  font-family: 'Montserrat', sans-serif;
-  border: 0px solid green;
-  font-weight:bold;
-  margin-right:50px;
-}
-
-.navigacija a {
-  display: block;
-  color: white;
-  text-align: center;  
-  text-decoration: none;
-  color:black;
-}
-
-.navigacija a:hover {
-  color:gray;
-  font-weight:bold;
-}*/
 
 .navGrid {
   display:grid;
@@ -145,10 +116,21 @@ ul {
     background-color:#FFCB66;
 }
 
+.logoRip{
+    height:60px;
+   background-color:#FFCB66;
+    -webkit-mask-image: url(https://i.imgur.com/oYFmZNJ.png);
+    -webkit-mask-size: 100% auto;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.logoPadding{
+    padding-top:50px;
+}
+
 .logo{
     background-color:#365461;
     color:white;
-    padding-top:70px;
     
 }
 
@@ -322,7 +304,7 @@ textarea::placeholder{
     top:-40px;      
 }
 
-.anda{
+.pictureAnda{
     height:100%;
     }
 
@@ -343,6 +325,10 @@ textarea::placeholder{
     max-width:250px;
     width:100%;
 }
+
+
+
+
 
 .liText{
     font-size:24px;
@@ -980,6 +966,9 @@ ul .activePageOM{
 }
 
 .selectedItemsGrid h6{
+    position:absolute;
+    top:50%;
+    transform: translate(0, -50%);
     font-family: 'Montserrat', sans-serif;
     font-weight:500;
     font-size:24px;
@@ -998,6 +987,98 @@ ul .activePageOM{
     max-width:120px;
     width:100%;
 }
+
+
+
+
+
+
+
+
+/*the container must be positioned relative:*/
+.custom-select, .custom-select2  {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  width:90%;  
+}
+
+.custom-select{
+    z-index:200;
+}
+
+.custom-select select, .custom-select2 select  {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+   background: rgba(211, 211, 211);
+   font-size:18px;
+   border-radius: 5px 5px 5px 5px;
+   font-weight:700;
+   color:#2F4858;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #2F4858 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #2F4858 transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  padding: 8px 16px;
+  font-size:18px;
+  color:#2F4858;  
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background: rgba(211 ,211 ,211);
+  top: 90%;
+  left: 0;
+  right: 0;
+  z-index: 40;
+   border-radius:0 0 5px 5px;
+}
+
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.selectedItemsGridWrapper{
+    position:absolute;
+    width:100%;
+    height:auto;
+    top:50%;
+    transform: translate(0, -50%);
+}
+
 
 .grid-container{
     display: grid;
@@ -1263,16 +1344,24 @@ ul .activePageOM{
 }
 
 #map{
+    margin-top:40px;
     height:800px;
     width:100%;
     position:relative;
 }
 
-.zoomButton{
+.blueRippedEffect{   
     position:absolute;
-    top:0;
+    bottom:-1px;
     left:0;
-    z-index:10p;
+    height:70px;
+    width:100%;
+    z-index:20;
+    background-color:#365461;
+    -webkit-mask-image: url(https://i.imgur.com/9XanwOV.png);
+    -webkit-mask-size: 100% auto;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position:bottom;
 }
 
 .activePageBold li a{
@@ -1465,11 +1554,17 @@ ul .activePageOM{
         left:5%;
     }
     
-    .dropdownBox{
-        left:50%;       
+    .custom-select, .custom-select2{
+        left:50%;
+        top:50%;
         transform:translateX(-50%);
         width:90%;
     }
+    
+    .selectedItemsGrid p{
+        font-size:13px;
+    }
+    
     
 }
 
@@ -1586,11 +1681,6 @@ ul .activePageOM{
     .pictureStacked1{
         max-height:200px;
     }
-    
-    .pictureAnda{
-        height:100%;
-    }
-    
     
     
 
@@ -1994,18 +2084,7 @@ ul .activePageOM{
     .pictureDescGridContainer2 p:nth-of-type(2){
     font-size:14px;
     }
-    
-    /*.transPicDiv img{
-        padding:0;
-    }*/
-    
-    /*.transPicDiv img:nth-of-type(even){
-        padding-left:24px;textSapnusAtlasis
-    }
-    .transPicDiv img:nth-of-type(odd){
-         padding-left:0px
-    }*/
-    
+       
     .pictureJurisRow{
         background-position:65% 0;
         height:450px;
@@ -2101,7 +2180,14 @@ ul .activePageOM{
         margin-top:15px;
         margin-bottom:-30px;
         
+    }   
+        .selectedItemsGrid p{
+        font-size:8px;
     }
+    
+    .zoomButtons{
+        display:none;
+    }   
 }
 
    
