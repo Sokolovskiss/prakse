@@ -1402,7 +1402,7 @@ ul .activePageOM{
 
 .background404{
     background-color:#FFCB66;
-    min-height:800px;
+    min-height:1000px;
 }
 
 .background404 p{
@@ -1449,6 +1449,7 @@ ul .activePageOM{
 
 .background404 a{
     text-decoration:none;
+    color:orange;
 }
 
 .mapMarkerDesc{
