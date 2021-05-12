@@ -1,14 +1,6 @@
 div {
     border: 0px solid red;
 }
-
-
-
-/*@font-face {
-    font-family: 'Mon';
-    src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
-}*/
-
 .wrapper{
     width:100%;
     position:relative;
@@ -27,7 +19,7 @@ div {
     position:relative;
     top:0;
     left:0;
-    
+
 }
 
 ul {
@@ -55,6 +47,7 @@ ul {
   font-family: 'Montserrat', sans-serif;
   border: 0px solid green;
   font-weight:bold;
+  background-color:white;
 }
 
 .navGrid div{
@@ -76,6 +69,10 @@ ul {
 
 }
 
+.navRow{
+    margin-bottom: 91px;
+}
+
 .button1{
     width:233px;
     height:50px;
@@ -90,6 +87,14 @@ ul {
     transform: translate(-50%, 0);
     font-size:18px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.button1:hover{
+    background-color: #f7d943;
+}
+
+.button1:active{
+    background-color: #f79443;
 }
 
 .title1{
@@ -118,7 +123,7 @@ ul {
 
 .logoRip{
     height:60px;
-   background-color:#FFCB66;
+    background-color:#FFCB66;
     -webkit-mask-image: url(https://i.imgur.com/oYFmZNJ.png);
     -webkit-mask-size: 100% auto;
     -webkit-mask-repeat: no-repeat;
@@ -180,10 +185,10 @@ input{
 }
 
 .inputLauks1{
-   position:relative;
-   width:48.43%;
-   height:43px;
-   background: rgba(196, 196, 196, 0.4);
+ position:relative;
+ width:48.43%;
+ height:43px;
+ background: rgba(196, 196, 196, 0.4);
 }
 
 #inputLauks2{
@@ -251,6 +256,15 @@ textarea::placeholder{
     outline:none;
 }
 
+.submitButton:hover{
+    background-color: #f7d943;
+}
+
+.submitButton:active{
+    background-color: #f79443;
+}
+
+
 .beigas{
     background-color:#365461;
     color:white;
@@ -306,7 +320,7 @@ textarea::placeholder{
 
 .pictureAnda{
     height:100%;
-    }
+}
 
 .bildes{
     width:100%;
@@ -453,8 +467,9 @@ textarea::placeholder{
     left:0;
     width:100%;
     height:100%;
-    z-index:2;
+    z-index:20;
     display:none;
+    overflow: hidden;
 }
 
 .customCheckbox{
@@ -518,10 +533,10 @@ textarea::placeholder{
     position:fixed;
     bottom:20px;
     right:20px;
-    z-index:3;
+    z-index:2;
     border-left: 13px solid transparent;
-	border-right: 13px solid transparent;
-	border-bottom: 25px solid Black;
+    border-right: 13px solid transparent;
+    border-bottom: 25px solid Black;
     cursor:pointer;
     display:none;
 }
@@ -537,7 +552,7 @@ textarea::placeholder{
 }
 
 .overlayMenu li{
-    
+
     font-size:50px;
     font-style:none;
     color:white;
@@ -647,10 +662,10 @@ textarea::placeholder{
 }
 
 .rectangleJuris{
-   position:absolute;
-   bottom:0;
-   max-height:60%;
-   min-width:100%;
+ position:absolute;
+ bottom:0;
+ max-height:60%;
+ min-width:100%;
 }
 
 .titleKenLudden{
@@ -677,18 +692,23 @@ textarea::placeholder{
 
 .arrow1, .arrow2{
     margin-bottom:30px;
-    margin-top:20px;
-    cursor:pointer;
+    margin-top:55px;
+    
 
+}
+
+.arrow1{
+    transform: scaleX(-1);
+    opacity:0.5;
 }
 
 .arrow2{
     margin-left:40px;
+    cursor:pointer;
 }
 
-.arrow2:hover{
-    opacity:0.5;
-}
+
+
 
 .KenLuddenRow{
     margin-top:100px;
@@ -741,14 +761,14 @@ ul .activePageOM{
 .pictureBalloon{
     display:block;
     margin:0 auto 0 auto;
-    max-width:200px;
-
-    
+    max-width:210px;
+    width:100%;   
 }
+
 
 .columnPersonigaisSapnis{
     height:100%;
-    }
+}
 
 .buttonSapnis{
     width:233px;
@@ -764,6 +784,14 @@ ul .activePageOM{
     transform: translate(-50%, 0);
     font-size:18px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.buttonSapnis:hover{
+    background-color: #f7d943;
+}
+
+.buttonSapnis:active{
+    background-color: #f79443;
 }
 
 .textUznemejiem,.textSapnusAtbalsta, .text99Iedvesmas{
@@ -996,26 +1024,27 @@ ul .activePageOM{
 
 
 /*the container must be positioned relative:*/
-.custom-select, .custom-select2  {
+.custom-select1, .custom-select2  {
   position: absolute;
   font-family: 'Montserrat', sans-serif;
   width:90%;  
+  z-index: 2;
 }
 
-.custom-select{
-    z-index:200;
+.custom-select1{
+    z-index:3;
 }
 
-.custom-select select, .custom-select2 select  {
+.custom-select1 select, .custom-select2 select  {
   display: none; /*hide original SELECT element:*/
 }
 
 .select-selected {
-   background: rgba(211, 211, 211);
-   font-size:18px;
-   border-radius: 5px 5px 5px 5px;
-   font-weight:700;
-   color:#2F4858;
+ background: rgba(211, 211, 211);
+ font-size:18px;
+ border-radius: 5px 5px 5px 5px;
+ font-weight:700;
+ color:#2F4858;
 }
 
 /*style the arrow inside the select element:*/
@@ -1041,9 +1070,10 @@ ul .activePageOM{
 .select-items div,.select-selected {
   padding: 8px 16px;
   font-size:18px;
-  color:#2F4858;  
+  color:;  
   cursor: pointer;
   user-select: none;
+  z-index: 2;
 }
 
 /*style items (options):*/
@@ -1054,7 +1084,7 @@ ul .activePageOM{
   left: 0;
   right: 0;
   z-index: 40;
-   border-radius:0 0 5px 5px;
+  border-radius:0 0 5px 5px;
 }
 
 
@@ -1095,7 +1125,6 @@ ul .activePageOM{
 .grid-item{
     background-color: rgba(255, 255, 255, 0.8); 
     text-align: center;
-    cursor:pointer;
     position:relative;
 
 }
@@ -1122,6 +1151,8 @@ ul .activePageOM{
     transform: translate(-15%, 0);
 }
 
+*{ outline: none; }
+
 .gridPictureTransparent{
     position:absolute;
     z-index:2;
@@ -1131,6 +1162,10 @@ ul .activePageOM{
     height:100%;
     left:50%;
     transform:translateX(-50%);
+}
+
+.clickable{
+    cursor:pointer;
 }
 
 .titleSparkleHeart{
@@ -1158,8 +1193,8 @@ ul .activePageOM{
 .grid-item2{
     background-color: rgba(255, 255, 255, 0.8); 
     text-align: center;
-    cursor:pointer;
 }
+
 .grid-item2 img{
     max-width:320px;
     width:100%;
@@ -1168,7 +1203,7 @@ ul .activePageOM{
 .rectangle{
     position:absolute;
     top:0;
-    z-index:40;
+    z-index:4;
     left:50%;
     transform:translateX(-50%);
 }
@@ -1205,6 +1240,23 @@ ul .activePageOM{
     font-size: 1.4vw;
 }
 
+.fancybox-slide--html .fancybox-close-small{
+    position: absolute;
+    right: 0 !important;
+    padding: 0 !important;
+    color: white !important;
+    /*transform: scale(1.3, 1.3);*/
+}
+
+.fancybox-bg {
+    background: rgba(47,72,88) !important;
+}
+
+.fancybox-is-open .fancybox-bg {
+    opacity: 0.9 !important;
+}
+
+
 #submitMessage1{
     text-align:center;
     color:orange;
@@ -1239,15 +1291,15 @@ ul .activePageOM{
 }
 
 .cliffGrid{
-        display: grid;
-        grid-template-columns: 53% 47%;    
-   }
+    display: grid;
+    grid-template-columns: 53% 47%;    
+}
 
 
 .glassesGrid, .sunGrid{
-        display: grid;
-        grid-template-columns: 40% 60%;    
-   }
+    display: grid;
+    grid-template-columns: 40% 60%;    
+}
 
 #showMoreButton{
     display:block;
@@ -1264,6 +1316,14 @@ ul .activePageOM{
     margin-bottom:150px;
     outline:none;
     display:none;
+}
+
+#showMoreButton:hover{
+    background-color: #f7d943;
+}
+
+#showMoreButton:active{
+    background-color: #f79443;
 }
 
 .pictureDescGridContainer2{
@@ -1298,34 +1358,6 @@ ul .activePageOM{
 
 .grid-item2{
     position:relative;
-}
-
-#videoOverlay{
-    width:100%;
-    height:100%;   
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:30;
-    background: rgba(47, 72, 88, 0.9); 
-    display:none;
-}
-
-#videoOverlay #buttonBackground{
-    max-width:90px;
-}
-
-#videoOverlay #playButton{
-    max-width:100px;
-}
-
-
-#videoOverlay{
-    color:white;
-    font-size:36px;
-    font-weight:500px;
-    font-family: 'Oswald', sans-serif;
-    text-align:center;
 }
 
 .videoClose p{
@@ -1471,7 +1503,7 @@ ul .activePageOM{
 .gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece, .gm-style .gm-style-iw-c, .gm-style .gm-style-iw-t::after{
     background: rgba(255, 168, 0, 0.0);
     box-shadow:none;
-    }
+}
 
 .gmnoprint button{
     padding-bottom:20px;;
@@ -1490,7 +1522,7 @@ ul .activePageOM{
 }
 
 .openMenuButton{
-        display:none;
+    display:none;
 }
 
 #om{
@@ -1515,6 +1547,21 @@ ul .activePageOM{
     margin-bottom:65px;
 }
 
+.sticky{
+  position: fixed;
+  top:0%;
+  width: 100%;
+  z-index: 5;
+}
+
+.videoName{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color:white;
+    text-align: center;
+    line-height: 0;
+}
 
 
 @media all and (max-width:1420px){
@@ -1526,53 +1573,53 @@ ul .activePageOM{
     }
     
     .navigacija{
-       /*padding:0 7px;*/
-       margin-right:25px;
-    }
-    
-    .navGrid a{
-        font-size:17px;
-    }
-    
-    .navElement{
-        display:none;
-    }
-    .navGrid{
-        grid-template-columns: 22% auto;
-    }
-    
-    .openMenuButton{
-        display:block;
-    }
-    
-        .dropDownBoxGrid{
-        grid-template-columns: auto;
-    }
-    
-    .dropdownBoxDesc{
-        position:absolute;
-        left:5%;
-    }
-    
-    .custom-select, .custom-select2{
-        left:50%;
-        top:50%;
-        transform:translateX(-50%);
-        width:90%;
-    }
-    
-    .selectedItemsGrid p{
-        font-size:13px;
-    }
-    
-    
+     /*padding:0 7px;*/
+     margin-right:25px;
+ }
+
+ .navGrid a{
+    font-size:17px;
+}
+
+.navElement{
+    display:none;
+}
+.navGrid{
+    grid-template-columns: 22% auto;
+}
+
+.openMenuButton{
+    display:block;
+}
+
+.dropDownBoxGrid{
+    grid-template-columns: auto;
+}
+
+.dropdownBoxDesc{
+    position:absolute;
+    left:5%;
+}
+
+.custom-select1, .custom-select2{
+    left:50%;
+    top:50%;
+    transform:translateX(-50%);
+    width:90%;
+}
+
+.selectedItemsGrid p{
+    font-size:13px;
+}
+
+
 }
 
 @media only screen and (max-width: 1200px){
     .navbar{
         display:none;
     }
-        .xButton{
+    .xButton{
         display:block;        
         right:10%;                
     }
@@ -1589,7 +1636,7 @@ ul .activePageOM{
         
         
     }
-     .atbalstitaji img{
+    .atbalstitaji img{
         /*transform:scale(0.6, 0.6);*/
         
     }
@@ -1616,15 +1663,18 @@ ul .activePageOM{
     .grid-containerPictures1{
         display: grid;
         grid-template-columns: 45% 10% 45%;    
-   }
+    }
 
-        .grid-containerPictures2{
+    .grid-containerPictures2{
         display: grid;
         grid-template-columns: 45% 5% 5% 45%;
-    
-}
+
+    }
 
 
+    .gm-style-iw{
+        max-width: 486px !important;
+    }
 
     .grid-containerPictures1 div:nth-of-type(1) {
         order: 3;
@@ -1661,18 +1711,18 @@ ul .activePageOM{
     
     
     .pictureLauma{
-        
+
     }
     
     .pictureBrinumaMeita{
         height:100%;
-       
+
     }
     
     .pictureZanda{
         height:100%;
     }
-       
+
     .pictureSibilla{
         height:100%;
     }
@@ -1696,7 +1746,7 @@ ul .activePageOM{
     
     
     .ulLogo{
-    font-size:12px;
+        font-size:12px;
     }
     
     .vt{
@@ -1767,7 +1817,7 @@ ul .activePageOM{
     .atbalstitaji .col-md-3{
         width:50%;
     }   
-       
+
     .sparkleLogo .col-md-2{
         width:30%;
     }
@@ -1781,416 +1831,438 @@ ul .activePageOM{
     .ulBiedriba{
         display:none;
     }
-   .liText{
-       padding-bottom:25px;
-   }
-   .fb, .ig{
-       float:left;
-       margin-left:5%;
-       margin-bottom:2%;
-   }
-   
-   .pp,.vt{
-       font-size:11px;
-   }
-   
-   .underInputText{
-       margin-left:5%;
-       font-size:12px;
-   }
-   
-   .customCheckbox{
-       float:right;
-       
-   }    
-   
-   .rekviziti{
-       display:block;
-   }
-   
-   .title1{
-       font-size:18px
-       font-weight:bold;
-   }
-   
-   .title2{
-       font-size:24px;
-       font-weight:bold;
-   }
-   
-   .contactUsRowSapnis{
-       margin-top:-25px;
-   }
-   
-   .contactUsRowSapnis form{
-       margin-top:-43px;
-   }
-   
-   .contactUsRowSapnis textarea{
-       height:50px;
-   }
-   
-   input[type="text"]{
-       font-size:14px;
-   }
-   
-   textarea{
-       font-size:14px;
-   }
-   .submitButton{
-       margin-top:100px;
-       margin-bottom:170px;
-       width:145px;
-       height:48px;
-       font-size:18px;
-   }
-   
-   
-   
-   .atbalstitajiTeksts p{
-       font-size:24px;
-   }
-   
-   .text{
-       font-size:12px;
-       margin-left:5%;
-       margin-right:5%;
-   }
-   
-   .beigas br{
-       display:none;
-   }
-   
-   .titlePage{
-       margin-top:68px;
-   }
-   .textSapnis{
-       margin-top:30px;
-       font-family: 'Montserrat', sans-serif;
-       font-size:14px;
-       font-weight:500;
-       margin-bottom:45px;
-   }
-   .titleBalloon{
-       margin-top:30px;
-       font-size:18px;
-   }
+    .liText{
+     padding-bottom:25px;
+ }
+ .fb, .ig{
+     float:left;
+     margin-left:5%;
+     margin-bottom:2%;
+ }
 
-    .textBalloon{
-       font-size:12px;
-       font-family: 'Montserrat', sans-serif;
-       margin-left:10%;
-       margin-right:10%;
-       line-height:14.6px;
-   }
-    
-    #submitMessage1{
-        font-size:18px;
-    }
-    
-   #submitMessage2{
-       margin-bottom:200px;
-       margin-left:10%;
-       margin-right:10%;
-       line-height:17px;
-       font-size: 14px;
-   }
+ .pp,.vt{
+     font-size:11px;
+ }
 
-    .pictureJurisText{
-        bottom:-45px;
-        font-size:18px;
-        line-height:27px;
-        margin-left:3%;
-        margin-right:3%;
-        font-weight:500;
-    }
-    
-    .titleKenLudden, .textKenLudden, .descKenLudden, .arrow1, .arrow2{
-        margin-right:3%;
-        margin-left:3%;
-    }
-    
-    .titleKenLudden{
-        font-size:18px;
-        margin-top:30px;
-    }
-    
-    .descKenLudden{
-        font-size:14px;
-        line-height:17px;
-        margin-top:10px;
-    }
-    
-    .textKenLudden{
-        margin-top:22px;
-       font-size:12px;
-       line-height:15px; 
-    }
-    
-    .arrow2{
-        margin-left:30px;
-    }
-    
-    .textIdeja{
-        margin-top:30px;
-        margin-bottom:110px;
-        font-size:12px;
-        line-height:14px;
-    }
-    
-    .textUznemejiem{
-        font-size:14px;
-        margin-top:40px;
-        line-height:14px;
-    }
-    
-    .title2Uznemejiem{
-        margin-top:-30px;
-        margin-bottom:-25px;
-    }
-    
-    .underInputText{
-        margin-top:10px;
-        margin-bottom:-10px;
-    }
-    
-    .pictureSun, .pictureCliff, .pictureGlasses{
-        float:none;
-        display:block;
-        margin: 0 auto 0 auto;
-        max-width:120px;
-        width:100%;
-    }
-    
-    .textSun, .textCliff, .textGlasses{
-        margin-left:5%;
-        margin-right:5%;
-        text-align:center;
-        font-size:12px;
-        line-height:14.6px;
-    }
-    
-    .glassesGrid, .sunGrid, .cliffGrid{
-        grid-template-columns: 100%;    
-   }
-    
-    .cliffGrid div:nth-of-type(1){
-        order:2;
-    }
-    .cliffGrid div:nth-of-type(2){
-        order:1;
-    }
-    
-    .textSun, .textCliff, .textGlasses{
-        margin-bottom:100px;
-    }
-    
-    .titleMisija{
-        font-size:24px;
-        margin-top:20px;
-        margin-bottom:20px;
-    }
-    
-    .textMisija{
-        font-size:18px;
-    }
-    
-    .textOrangeBackground{
-        font-size: 18px;
-        margin-left:5%;
-        margin-right:5%;
-        margin-bottom:50x;
-        font-weight:500;
-        line-height:22px;
-    }
-    
-    .titleSapnusAtlasis{
-        font-size:24px;
-    }
-    
-    .textSapnusAtlasis{
-        font-size:18px;
-        margin-left:5%;
-        margin-right:5%;
-        margin-bottom:50px;
-    }
-    
-    .rainbowRow{
-        margin-top:50px;
-    }
-    
-    .title1SapnuBanka{
-        margin-top:55px;
-        font-size:18px;
-        margin-bottom:25px;
-        margin-left:5%;
-        margin-right:5%;
-    }
-    
-    .title1SapnuBanka2{
-        margin-top:10px;
-    }
-    
-    .freespace{
-        height:120px;
-    }
-    
-    .grid-container{
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap:0;
-        grid-row-gap:14px;
-        margin-bottom:85px;
-    }
-        
-    .grid-container img{
-        max-width:380px;
-        padding-left:7px;
-        padding-right:7px;
-    }
-    
+ .underInputText{
+     margin-left:5%;
+     font-size:12px;
+ }
 
-    .gridContainerFreeSpace{
-        display:none;
-    }
+ .customCheckbox{
+     float:right;
 
-    .text99Iedvesmas{
-        font-size:18px;
-        font-weight:700;
-        margin-bottom:60px;
-    }
-    
-    #showMoreButton{
-        display:block;
-    }
-    
-    .hidden{
-    display:none;
-    }
-    
-    .grid-container2{
-    grid-template-columns: auto;
-    grid-row-gap:30px;
-    }
-    
-    .grid-container2 img{
-        max-width:420px;
-    }
-    
-    .pictureDescGridContainer2 p:nth-of-type(1){
+ }    
+
+ .rekviziti{
+     display:block;
+ }
+
+ .title1{
+     font-size:18px
+     font-weight:bold;
+ }
+
+ .title2{
+     font-size:24px;
+     font-weight:bold;
+ }
+
+ .contactUsRowSapnis{
+     margin-top:-25px;
+ }
+
+ .contactUsRowSapnis form{
+     margin-top:-43px;
+ }
+
+ .contactUsRowSapnis textarea{
+     height:50px;
+ }
+
+ input[type="text"]{
+     font-size:14px;
+ }
+
+ textarea{
+     font-size:14px;
+ }
+ .submitButton{
+     margin-top:100px;
+     margin-bottom:170px;
+     width:145px;
+     height:48px;
+     font-size:18px;
+ }
+
+
+
+ .atbalstitajiTeksts p{
+     font-size:24px;
+ }
+
+ .text{
+     font-size:12px;
+     margin-left:5%;
+     margin-right:5%;
+ }
+
+ .beigas br{
+     display:none;
+ }
+
+ .titlePage{
+     margin-top:68px;
+ }
+ .textSapnis{
+     margin-top:30px;
+     font-family: 'Montserrat', sans-serif;
+     font-size:14px;
+     font-weight:500;
+     margin-bottom:45px;
+ }
+ .titleBalloon{
+     margin-top:30px;
+     font-size:18px;
+ }
+
+ .textBalloon{
+     font-size:12px;
+     font-family: 'Montserrat', sans-serif;
+     margin-left:10%;
+     margin-right:10%;
+     line-height:14.6px;
+ }
+
+ #submitMessage1{
     font-size:18px;
-    }
-
-    .pictureDescGridContainer2 p:nth-of-type(2){
-    font-size:14px;
-    }
-       
-    .pictureJurisRow{
-        background-position:65% 0;
-        height:450px;
-    }
-    
-    .videoClose p{
-    margin-top:200px;   
-    }
-    
-    .videoGrid{
-        max-width:400px;
-    }
-    
-    .xButton{
-        font-size:20px;
-        margin-top:30px;     
-    }
-    
-    .gridNoPicture{
-        font-size: 6vw;
-    }
-    
-    .titleSapnuBanka{
-        margin-top:65px;
-        font-size:36px;
-    }
-    
-    .titleMerkis{
-        margin-top:100px;
-        font-size:24px;
-    }
-    
-     .textSun, .textCliff, .textGlasses{
-        margin-bottom:70px;
-    }
-    
-    .pictureTrees{
-        margin-top:140px;
-        margin-bottom:0;
-        max-width:120px;
-    }
-    
-    .pictureRainbow{
-        margin-top:90px;
-        margin-bottom:0;
-        max-width:300px;
-    }
-    
-    .pictureMegaphone{
-        max-width:100px;
-    }
-    
-    .picturePeople{
-        max-width:130px;
-    }
-    
-    .text99Iedvesmas{
-        
-    }
-    .grid-container{
-        margin-bottom:16%;
-    }
-    
-    .titleSparkleHeart{
-        font-size:24px;
-    }
-    .textSparkleHeart{
-        font-size:14px;
-        line-height:17px;
-    }         
-    
-    .mapMarkerDesc{
-        grid-template-columns:auto;
-        width: 290px;
-        height:200px;
-    }
-    
-    .mapMarkerDesc p{
-        font-size:14px;
-        line-height:17px;
-        margin-bottom:-30px;
-    }
-    
-    .mapMarkerDesc h6{
-        font-size:16px;
-        margin-bottom:-20px;
-    }
-    
-    .mapMarkerDesc img{
-        position:relative;
-        float:right;
-        margin-right:25px;
-        margin-top:15px;
-        margin-bottom:-30px;
-        
-    }   
-        .selectedItemsGrid p{
-        font-size:8px;
-    }
-    
-    .zoomButtons{
-        display:none;
-    }   
 }
 
-   
+#submitMessage2{
+ margin-bottom:200px;
+ margin-left:10%;
+ margin-right:10%;
+ line-height:17px;
+ font-size: 14px;
+}
+
+.pictureJurisText{
+    bottom:-45px;
+    font-size:18px;
+    line-height:27px;
+    margin-left:3%;
+    margin-right:3%;
+    font-weight:500;
+}
+
+.titleKenLudden, .textKenLudden, .descKenLudden, .arrow1, .arrow2{
+    margin-right:3%;
+    margin-left:3%;
+}
+
+.arrow1, .arrow2{
+ margin-top: 10px;
+}
+
+.titleKenLudden{
+    font-size:18px;
+    margin-top:30px;
+}
+
+.descKenLudden{
+    font-size:14px;
+    line-height:17px;
+    margin-top:10px;
+}
+
+.textKenLudden{
+    margin-top:22px;
+    font-size:12px;
+    line-height:15px; 
+}
+
+.arrow2{
+    margin-left:30px;
+}
+
+.textIdeja{
+    margin-top:30px;
+    margin-bottom:110px;
+    font-size:12px;
+    line-height:14px;
+}
+
+.textUznemejiem{
+    font-size:14px;
+    margin-top:40px;
+    line-height:14px;
+}
+
+.title2Uznemejiem{
+    margin-top:-30px;
+    margin-bottom:-25px;
+}
+
+.underInputText{
+    margin-bottom:-10px;
+}
+
+.pictureSun, .pictureCliff, .pictureGlasses{
+    float:none;
+    display:block;
+    margin: 0 auto 0 auto;
+    max-width:120px;
+    width:100%;
+}
+
+.textSun, .textCliff, .textGlasses{
+    margin-left:5%;
+    margin-right:5%;
+    text-align:center;
+    font-size:12px;
+    line-height:14.6px;
+}
+
+.glassesGrid, .sunGrid, .cliffGrid{
+    grid-template-columns: 100%;    
+}
+
+.cliffGrid div:nth-of-type(1){
+    order:2;
+}
+.cliffGrid div:nth-of-type(2){
+    order:1;
+}
+
+.textSun, .textCliff, .textGlasses{
+    margin-bottom:100px;
+}
+
+.titleMisija{
+    font-size:24px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.textMisija{
+    font-size:18px;
+}
+
+.textOrangeBackground{
+    font-size: 18px;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:50x;
+    font-weight:500;
+    line-height:22px;
+}
+
+.titleSapnusAtlasis{
+    font-size:24px;
+}
+
+.textSapnusAtlasis{
+    font-size:18px;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:50px;
+}
+
+.rainbowRow{
+    margin-top:50px;
+}
+
+.title1SapnuBanka{
+    margin-top:55px;
+    font-size:18px;
+    margin-bottom:25px;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+.title1SapnuBanka2{
+    margin-top:10px;
+}
+
+.freespace{
+    height:120px;
+}
+
+.videoName{
+    font-size: 24px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap:0;
+    grid-row-gap:14px;
+    margin-bottom:85px;
+}
+
+.grid-container img{
+    max-width:380px;
+    padding-left:7px;
+    padding-right:7px;
+}
+
+
+.gridContainerFreeSpace{
+    display:none;
+}
+
+.text99Iedvesmas{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:60px;
+}
+
+#showMoreButton{
+    display:block;
+}
+
+.hidden{
+    display:none;
+}
+
+.grid-container2{
+    grid-template-columns: auto;
+    grid-row-gap:30px;
+}
+
+.grid-container2 img{
+    max-width:420px;
+}
+
+.pictureDescGridContainer2 p:nth-of-type(1){
+    font-size:18px;
+}
+
+.pictureDescGridContainer2 p:nth-of-type(2){
+    font-size:14px;
+}
+
+.pictureJurisRow{
+    background-position:65% 0;
+    height:450px;
+}
+
+.videoClose p{
+    margin-top:200px;   
+}
+
+.videoGrid{
+    max-width:400px;
+}
+
+.xButton{
+    font-size:20px;
+    margin-top:30px;     
+}
+
+.gridNoPicture{
+    font-size: 6vw;
+}
+
+.titleSapnuBanka{
+    margin-top:65px;
+    font-size:36px;
+}
+
+.titleMerkis{
+    margin-top:100px;
+    font-size:24px;
+}
+
+.textSun, .textCliff, .textGlasses{
+    margin-bottom:70px;
+}
+
+.pictureTrees{
+    margin-top:140px;
+    margin-bottom:0;
+    max-width:120px;
+}
+
+.pictureRainbow{
+    margin-top:90px;
+    margin-bottom:0;
+    max-width:300px;
+}
+
+.pictureMegaphone{
+    max-width:100px;
+}
+
+.picturePeople{
+    max-width:130px;
+}
+
+.text99Iedvesmas{
+
+}
+.grid-container{
+    margin-bottom:16%;
+}
+
+.titleSparkleHeart{
+    font-size:24px;
+}
+.textSparkleHeart{
+    font-size:14px;
+    line-height:17px;
+}         
+
+.mapMarkerDesc{
+    grid-template-columns:auto;
+    width: 290px;
+    height:200px;
+}
+
+.mapMarkerDesc p{
+    font-size:14px;
+    line-height:17px;
+    margin-bottom:-30px;
+}
+
+.mapMarkerDesc h6{
+    font-size:16px;
+    margin-bottom:-20px;
+}
+
+.mapMarkerDesc img{
+    position:relative;
+    float:right;
+    margin-right:25px;
+    margin-top:15px;
+    margin-bottom:-30px;
+
+}   
+.selectedItemsGrid p{
+    font-size:8px;
+}
+
+.zoomButtons{
+    display:none;
+}
+
+
+.fancybox-content{
+    padding: 44px 20px 44px 20px !important;
+}
+
+.fancybox-slide--html .fancybox-close-small{
+    right: 10px !important;
+}
+
+}
+
+@media only screen and (max-width: 350px){
+    .navRow{
+        margin-bottom: 52px;
+    }
+}
+
 
 
 
